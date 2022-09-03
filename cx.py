@@ -1117,7 +1117,7 @@ if __name__=='__main__':
 	try:os.system('pkg install play-audio')
 	except:pass
 	try:os.system('clear')
-	######except:pass
+	except:pass
 	######alvino_xy(f'\n\t{x}——> {h}AWALI DENGAN BISMILLAH :) {x}')
 	######alvino_xy(f'\n\t{x}——> {h}SENANG BANGET KAMUNYA :) {x}')
 	######alvino_xy(f'\n\t{x}——> {h}SEMOGA HALUMU HALUKU SEMOGA MENJADI HALOPYOU :) {x}')
