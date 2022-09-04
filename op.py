@@ -1101,5 +1101,5 @@ if __name__=='__main__':
 	try:os.mkdir('CP')
 	except:pass
 	try:os.mkdir('OK')
-	####except:pass
+	
 	
