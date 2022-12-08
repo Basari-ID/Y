@@ -355,7 +355,7 @@ def passwrd():
 	ler = '# CRACK PROCESS START, PRESS CTRL+Z TO STOP'
 	sol().print(mark(ler, style='red'))
 	krek = '[•] OK RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/OK/%s\n[•] CP RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/CP/%s\n[•]MAINKAN MODE PESAWAT JIKA  TIDAK ADA HASIL'%(okc,cpc)
-	cetak(nel(krek, title=' • ⟨ BISMILLAH ⟩ • '))
+	cetak(nel(krek, title=' • ⟨ CRACKING ⟩ • '))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -408,7 +408,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	print('\r [%sBASARI\33[m] %s/%s  \x1b[1;92m OK : [%s]  \x1b[1;93m CP : [%s] %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print('\r [%sBASARI\33[m] %s/%s \x1b[1;92mOK : %s \x1b[1;93mCP : %s %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	for pw in pwv:
 		try:
 			nip=random.choice(prox)
