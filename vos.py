@@ -365,22 +365,22 @@ def setting():
 	baz_gege = input(f'{P}[?] Pilih :{x} ')
 	print(f'{b}========================================{x}')
 	if baz_gege in ['1','01']:
-		for akunlama in sorted(id):
-			id2.append(akunlama)
+		for tua in sorted(id):
+			id2.append(tua)
+
 	elif baz_gege in ['2','02']:
 		muda=[]
-		baru=[]
-		for akunbaru in sorted(id):
-			muda.append(akunbaru)
-		bmbf=len(baru)
-		bmbfm=(bmbf-1)
-		for xmuda in range(bmbf):
-			id2.append(baru[bmbfm])
-			bmbfm -=1
+		for bacot in sorted(id):
+			muda.append(bacot)
+		bcm=len(muda)
+		bcmi=(bcm-1)
+		for xmud in range(bcm):
+			id2.append(muda[bcmi])
+			bcmi -=1
 	elif baz_gege in ['3','03']:
-		for randomakun in id:
-			bf = random.randint(0,len(id2))
-			id2.insert(bf,randomakun)
+		for bacot in id:
+			xx = random.randint(0,len(id2))
+			id2.insert(xx,bacot)
 	else:
 		print('[!] Pilih Yang Bener Cuukk')
 		exit()
@@ -422,8 +422,8 @@ def passwrd():
 	print(f'{P}[•]{x} Hasil {K}CP{x} Tersimpan Di{x} {P}:{x} {k}%s {x}'%(cpc))
 	print(f'{b}========================================{x}')
 	with tred(max_workers=30) as pool:
-		for bashengker in id2:
-			idf,nmf = bashengker.split('|')[0],bashengker.split('|')[1].lower()
+		for yuzong in id2:
+			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
 			pwv = []
 			if len(nmf)<6:
