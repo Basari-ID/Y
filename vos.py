@@ -369,6 +369,7 @@ def setting():
 			id2.append(akunlama)
 	elif baz_gege in ['2','02']:
 		muda=[]
+		baru=[]
 		for akunbaru in sorted(id):
 			muda.append(akunbaru)
 		bmbf=len(baru)
