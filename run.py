@@ -205,12 +205,12 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 		
 #
 def banner():
-	cetak(panel(f"""\t   [bold cyan]______  ___   _________  _______________ 
-\t   [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
-\t   [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
-\t   [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
-\t   [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
-\t   [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
+	cetak(panel(f"""\t    [bold cyan]______  ___   _________  _______________ 
+\t    [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
+\t    [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
+\t    [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
+\t    [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
+\t    [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
                    """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
@@ -280,8 +280,8 @@ def menu(id):
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
 	ghku = 'Basari-ID'
-	gpp.append(panel(f'[cyan]Status   : Free\nUid    : {id}\nUip    : -  ',width=34,padding=(0,2),title=f"[bold cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
-	gpp.append(panel(f'[cyan]Author   : Muh Basari\nGithub   : {ghku}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[bold cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Status   : Free\nUserid    : {id}\nUserip    : {iplu}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Author   : Muh Basari\nGithub   : {ghku}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Crack Publik Massal\n [cyan]02. Crack Followers\n [cyan]03. [cyan]Crack Grup Fb\n [cyan]04. Hasil Crack Akun\n [cyan]05. Lapor Bug Sc\n [cyan]00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
