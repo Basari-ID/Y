@@ -24,7 +24,7 @@ def basari_tamvan(basjalan):
 
 #
 def back():
-	login()
+	bass()
 	
 #
 def clear():
@@ -214,7 +214,7 @@ def banner():
                    """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
-def login():
+def bass():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -251,14 +251,14 @@ def login_bas():
 		tok = re.search('accessToken="(.*?)"',str(roq.content)).group(1)
 		ken = open(".token.txt", "w").write(tok)
 		cok = open(".cok.txt", "w").write(cookie)
-		basari_tamvan(f'{x}└── {b}Berhasil Login{x} ')
+		basari_tamvan(f'{x}└── Berhasil Login{x} ')
 		time.sleep(4)
 		exit()
 	except Exception as e:
 		os.system('rm -rf .cok.txt && rm -rf .token.txt')
-		basari_tamvan(f'{x}└── {k}Login Gagal ! Login Ulang Ganti Cookes !{x} ')
-		time.sleep(5)
-		login_bas()
+		basari_tamvan(f'{x}└── Login Gagal ! Login Ulang Ganti Cookes !{x} ')
+		time.sleep(4)
+		exit()
 
 #
 def menu(name,id,birthday):
@@ -739,4 +739,4 @@ if __name__=='__main__':
 	except:pass
 	try:os.mkdir('/sdcard/BMBF-DATA/CP')
 	except:pass
-	login()
+	bass()
