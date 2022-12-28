@@ -220,11 +220,9 @@ def bass():
 		cok = open('.cok.txt','r').read()
 		tokenku.append(token)
 		try:
-			basariheker = requests.get('https://graph.facebook.com/me?fields=id,name,birthday&access_token='+tokenku[0], cookies={'cookie':cok})
+			basariheker = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
 			basganteng = json.loads(basariheker.text)['id']
-			basganteng2 = json.loads(basariheker.text)['name']
-			basganteng3 = json.loads(basariheker.text)['birthday']
-			menu(basganteng,basganteng2,basganteng3)
+			menu(basganteng)
 		except KeyError:
 			login_bas()
 		except requests.exceptions.ConnectionError:
@@ -259,7 +257,7 @@ def login_bas():
 		exit()
 
 #
-def menu(id,name,birthday):
+def menu(id):
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -271,7 +269,7 @@ def menu(id,name,birthday):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Nama   : {name}\nUid    : {id}\nLahir  : {birthday}  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Nama   : Tarista Raya\nUid    : {id}\nLahir  : 09/01/2000  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
