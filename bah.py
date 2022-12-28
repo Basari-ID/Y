@@ -431,7 +431,7 @@ def dump_massal():
 	for met in range(baz_coder):
 		baz+=1
 		cetak(panel(f' Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
-		bazfaa = input(f'Id '+str(baz)+' : ')
+		bazfaa = input(f'Idz '+str(baz)+' : ')
 		uid.append(bazfaa)
 	for userr in uid:
 		try:
@@ -533,8 +533,9 @@ def wordlist():
 	cetak(panel(f'      [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
 	print('')
 	global prog,des
-	prog = Progress(SpinnerColumn('monkey'),TextColumn('{task.description}'),BarColumn(bar_width=23),TextColumn('{task.percentage:.0f}%'),TimeElapsedColumn())
+	prog = Progress(SpinnerColumn('earth'),TextColumn('{task.description}'),BarColumn(bar_width=23),TextColumn('{task.percentage:.0f}%'),TimeElapsedColumn())
 	des = prog.add_task('',total=len(id2))
+	with prog:
 	with tred(max_workers=30) as pool:
 		for basid in id2:
 			idf,nmf = basid.split('|')[0],basid.split('|')[1].lower()
@@ -568,8 +569,11 @@ def wordlist():
 			else:
 				pool.submit(crackf,idf,pwv)
 	print('')
-	print(f'└── akun ok : {h}%s '%(ok))
-	print(f'{x}└── akun cp : {k}%s{x} '%(cp))
+	cetak(panel(f'[bold green]SUKSES CRACK',width=70,title=f"",style=f"{warna_kolor}"))
+	print('')
+	print(f'{h} OK : {h}%s '%(ok))
+	print(f'{k} CP : {k}%s{x} '%(cp))
+	print('')
 	
 #
 def crackm(idf,pwv):
