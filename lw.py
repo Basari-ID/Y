@@ -323,7 +323,7 @@ def menu(my_id):
 	poko = input(f'[{B}*{P}]select:')
 	if poko in ['1']:
 		craker()
-	elif ridwan-xd223 in ['0']:
+	elif poko in ['0']:
 		os.system('rm -rf token.txt')
 		os.system('rm -rf cookie.txt')
 		print('👉Successfully Logout+Delete Cookies ')
