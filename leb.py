@@ -269,8 +269,8 @@ def menu(id):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Status   : Premium\nUid    : {id}\nTanggal  : {tgl} {bln} {thn}  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
-	gpp.append(panel(f'[cyan]Author   : Muh Basari\nAuthor      : Ansyah Arvel\nUip  : {iplu}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Status   : Premium\nUid      : {id}\nTanggal  : {tgl} {bln} {thn}  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nAuthor  : Ansyah Arvel',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Crack Publik Massal\n 02. Crack Followers\n 03. Crack Grup Fb\n 04. Hasil Crack Akun\n 05. Lapor Bug Sc\n 00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
