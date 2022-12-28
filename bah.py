@@ -220,17 +220,13 @@ def bass():
 		cok = open('.cok.txt','r').read()
 		tokenku.append(token)
 		try:
-			aa = requests.get('https://graph.facebook.com/me?fields=name,id,birthday&access_token='+tokenku[0], cookies={'cookie':cok})
-			ss = json.loads(aa.text)['name']
-			uu = json.loads(aa.text)['id']
-			hh = json.loads(aa.text)['birthday']
-			menu(ss,uu,hh)
+			basariheker = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
+			basganteng = json.loads(basariheker.text)['id']
+			menu(basganteng)
 		except KeyError:
 			login_bas()
 		except requests.exceptions.ConnectionError:
-			bas = ' PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN '
-			faa = mark(bas, style='red')
-			sol().print(faa, style='cyan')
+			basari_tamvan(f'{bas}[!] JARINGAN EROR BRO COBA LAGI !{x}')
 			exit()
 	except IOError:
 		login_bas()
