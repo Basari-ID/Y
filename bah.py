@@ -220,9 +220,11 @@ def bass():
 		cok = open('.cok.txt','r').read()
 		tokenku.append(token)
 		try:
-			basariheker = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
+			basariheker = requests.get('https://graph.facebook.com/me?fields=id,name,birthday&access_token='+tokenku[0], cookies={'cookie':cok})
 			basganteng = json.loads(basariheker.text)['id']
-			menu(basganteng)
+			basganteng2 = json.loads(basariheker.text)['name']
+			basganteng3 = json.loads(basariheker.text)['birthday']
+			menu(basganteng,basganteng2,basganteng3)
 		except KeyError:
 			login_bas()
 		except requests.exceptions.ConnectionError:
@@ -257,7 +259,7 @@ def login_bas():
 		exit()
 
 #
-def menu(name,id,birthday):
+def menu(id,name,birthday):
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
