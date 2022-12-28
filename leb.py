@@ -205,12 +205,12 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 		
 #
 def banner():
-	cetak(panel(f"""\t\t[bold cyan]    ____  __  __ ____  ______ 
-\t\t[bold cyan]   |  _ \|  \/  |  _ \|  ____|
-\t\t [bold cyan]  | |_) | \  / | |_) | |__   
-\t\t[bold cyan]   |  _ <| |\/| |  _ <|  __|  
-\t\t[bold cyan]   | |_) | |  | | |_) | |     
-\t\t[bold cyan]   |____/|_|  |_|____/|_|
+	cetak(panel(f"""\t[bold cyan]  _____  _____  ______ __  __ _____ _    _ __  __ 
+\t[bold cyan] |  __ \|  __ \|  ____|  \/  |_   _| |  | |  \/  |
+\t[bold cyan] | |__) | |__) | |__  | \  / | | | | |  | | \  / |
+\t[bold cyan] |  ___/|  _  /|  __| | |\/| | | | | |  | | |\/| |
+\t[bold cyan] | |    | | \ \| |____| |  | |_| |_| |__| | |  | |
+\t[bold cyan] |_|    |_|  \_\______|_|  |_|_____|\____/|_|  |_|
                    """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
@@ -270,7 +270,7 @@ def menu(id):
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
 	gpp.append(panel(f'[cyan]Status   : Premium\nUid      : {id}\nTanggal  : {tgl} {bln} {thn}  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
-	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nAuthor  : Ansyah Arvel',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nAuthor   : Ansyah Arvel',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Crack Publik Massal\n 02. Crack Followers\n 03. Crack Grup Fb\n 04. Hasil Crack Akun\n 05. Lapor Bug Sc\n 00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
