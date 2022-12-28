@@ -211,7 +211,7 @@ def banner():
 \t\t[bold cyan]  |  _ <| |\/| |  _ <|  __|  
 \t\t[bold cyan]  | |_) | |  | | |_) | |     
 \t\t[bold cyan]  |____/|_|  |_|____/|_|
-                   """,width=70,title=f"",subtitle=f"[bold white] Version [bold white]2.2[/]",style=f"{warna_kolor}"))
+                   """,width=70,title=f"",subtitle=f"[bold white] 2.2 [/]",style=f"{warna_kolor}"))
 
 #
 def bass():
@@ -273,12 +273,12 @@ def menu(name,id,birthday):
 	banner()
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
-	gpp.append(panel(f'[cyan]Nama : {name}\nUid  : {id}\nLahir  : {birthday}  ',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Nama   : {name}\nUid    : {id}\nLahir  : {birthday}  ',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
-	cetak(panel(f'\t             [white][bold green] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
-	print(f' [{b}01{x}]. Crack Publik Massal\n [{b}02{x}]. Crack Followers\n [{b}03{x}]. Crack Grup Fb\n [{b}04{x}]. Hasil Crack Akun\n [{b}05{x}]. Lapor Bug Sc\n [{b}00{x}]. Keluar Hapus Koki')
-	______muhammad______basari______ = input(f'{P}[?] Pilih :{x} ')
+	cetak(panel(f'\t                   [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' 01. Crack Publik Massal\n 02. Crack Followers\n 03. Crack Grup Fb\n 04. Hasil Crack Akun\n 05. Lapor Bug Sc\n 00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
+	______muhammad______basari______ = input(f'Pilih :{x} ')
 	if ______muhammad______basari______ in ['01','1']:
 		dump_massal()
 	elif ______muhammad______basari______ in ['02','2']:
