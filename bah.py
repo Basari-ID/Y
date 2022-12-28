@@ -274,7 +274,7 @@ def menu(name,id,birthday):
 	iplu = requests.get("https://api.ipify.org").text
 	gpp = []
 	gpp.append(panel(f'[cyan]Nama : {name}\nUid  : {id}\nLahir  : {birthday}  ',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
-	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {ip}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
+	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• Informasi •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
 	cetak(panel(f'\t             [white][bold green] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	print(f' [{b}01{x}]. Crack Publik Massal\n [{b}02{x}]. Crack Followers\n [{b}03{x}]. Crack Grup Fb\n [{b}04{x}]. Hasil Crack Akun\n [{b}05{x}]. Lapor Bug Sc\n [{b}00{x}]. Keluar Hapus Koki')
