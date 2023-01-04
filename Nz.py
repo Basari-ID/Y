@@ -266,7 +266,6 @@ def login_bas():
 		exit()
 
 #menunya
-lisensi()
 def menu(id):
 	try:
 		token = open('.baztoken.txt','r').read()
