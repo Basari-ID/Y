@@ -259,12 +259,12 @@ def login_bas():
 		cok = open(".bazcok.txt", "w").write(cookie)
 		basari_tamvan(f'{x}{bv}└── Berhasil Login{x} ')
 		time.sleep(1)
-		exit()
+		bass()
 	except Exception as e:
 		os.system('rm -rf .bazcok.txt && rm -rf .baztoken.txt')
 		basari_tamvan(f'{x}{bv}└── Login Gagal ! Login Ulang Ganti Cookes !{x} ')
 		time.sleep(1)
-		exit()
+		login_bas()
 
 #menunya
 def menu(id):
