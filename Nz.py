@@ -194,6 +194,7 @@ def lisensi():
 	else:
 		basari_tamvan(f'└── lesensi valid ')
 		time.sleep(1)
+		bass()
 		
 def author():
 	basari_tamvan(f'{bv}└── anda akan diarahkan ke fb untuk membeli lisensi  {x}')
