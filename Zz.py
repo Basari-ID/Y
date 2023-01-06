@@ -145,7 +145,7 @@ def basarii():
 	print(f'{bv}[!] Masukkan Nama Kamu Terlebih Dahulu')
 	nama = input(f'[>] nama : ');open('.nama.json','w').write(nama)
 	time.sleep(1)
-	bass()
+	login_bas()
 		
 ###----------[ BANNER 1 ]---------- ###
 def banner():
@@ -238,7 +238,7 @@ def menu(id):
 	babas.print(Columns(gpp))
 	cetak(panel(f'\t                  [bold cyan]Menu Script',width=70,title=f"",style=f"{warna_kolor}"))
 	cetak(panel(f' [cyan]01. Crack Publik Massal\n [cyan]02. Crack Followers\n [cyan]03. [cyan]Hasil Crack Akun\n [cyan]04. Gabung Grup Wa\n [cyan]05. Lapor Bug Sc\n [cyan]00. Keluar Hapus Cokis',width=70,title=f"",style=f"{warna_kolor}"))
-	______muhammad______basari______ = input(f'{bv}Pilih : ')
+	______muhammad______basari______ = input(f'{bv}└── Pilih : ')
 	if ______muhammad______basari______ in ['01','1']:
 		dump_massal()
 	elif ______muhammad______basari______ in ['02','2']:
@@ -476,7 +476,7 @@ def setting():
 		exit()
 		
 	cetak(panel(f'\t                  [bold cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' [cyan]01. Method Mobile V1\n [cyan]02. Method Mobile V2\n 03. [cyan]Method Mobile V3\n 04. [cyan]Method Mobile V4',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Method Mobile V.1\n [cyan]02. Method Mobile V.2\n 03. [cyan]Method Mobile V.3\n 04. [cyan]Method Mobile V.4',width=70,title=f"",style=f"{warna_kolor}"))
 	____method_crack____ = input(f'{bv}└── Pilih : ')
 	if ____method_crack____ in ['1','01']:
 		basari.append('m.facebook')
