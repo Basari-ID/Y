@@ -140,9 +140,9 @@ def login():
 		cok = open('.cok.txt','r').read()
 		tokenku.append(token)
 		try:
-			sy = requests.get('https://graph.facebook.com/me?fields=id&access_token='+tokenku[0], cookies={'cookie':cok})
-			sy3 = json.loads(sy.text)['id']
-			menu(sy3)
+			basariheker = requests.get('https://graph.facebook.com/me?fields=id&access_token='+tokenku[0], cookies={'cookie':cok})
+			basganteng = json.loads(basariheker.text)['id']
+			menu(basganteng)
 		except KeyError:
 			login_lagi334()
 		except requests.exceptions.ConnectionError:
