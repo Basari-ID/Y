@@ -130,8 +130,7 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 ###----------[ CEK CEK ]---------- ###
 def basarii():
 	os.system('clear')
-	cetak(panel(f"""[bold green]HARAP FOLLOW FACEBOOK AUTHOR TERLEBIH DAHULU[/]""",width=40,title=f"[bold green]• [bold white]PEMBERITAHUAN [bold green]• ",style=f"{warna_kolor}"))
-	time.sleep(1)
+	cetak(panel(f"""[bold green]HARAP FOLLOW FACEBOOK AUTHOR TERLEBIH DAHULU[/]""",width=70,title=f"[bold green]• [bold white]PEMBERITAHUAN [bold green]•",style=f"{warna_kolor}"))
 	os.system("xdg-open https://www.facebook.com/bazcracker")
 	login_bas()
 
